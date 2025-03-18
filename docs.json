@@ -16,10 +16,10 @@
           {
             "group": "Get Started",
             "pages": [
-              "introduction",
+              "intorduction-getting-started",
               "quickstart",
-              "development",
-              "Onboarding"
+              "Onboarding",
+              "development"
             ]
           },
           {
