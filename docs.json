@@ -17,6 +17,8 @@
             "group": "Get Started",
             "pages": [
               "introduction",
+              "best practice",
+              "onboarding",
               "quickstart",
               "development"
             ]
