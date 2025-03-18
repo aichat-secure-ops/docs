@@ -16,7 +16,7 @@
           {
             "group": "Get Started",
             "pages": [
-              "intorduction-getting-started",
+              "introduction",
               "quickstart",
               "Onboarding",
               "development"
