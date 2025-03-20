@@ -1,0 +1,150 @@
+---
+title: "Flow"
+description: "AiChat's Flow Builder is a powerful tool that allows you to create advanced conversation flows. With Flow Builder, you can create more engaging and dynamic conversations that respond to user input in a variety of ways. This guide will offer you further details about flow and how to configure it."
+---
+
+### **Create Flow**
+
+Log in to the AiChat platform and select your organization, once you are in the Aichat dashboard, click the “Flows” tab on the side navigation menu.
+
+![images/Flowpage.png](/images/Flowpage.png)
+
+Once you are in the “Flows” page, click on the "Create Flow" button. A pop up will appear where you are asked to input the flow name and description for your new flow. Give your flow a name and description to easily identify it later and avoid any confusion with the other flows
+
+![images/CreateFlow.png](/images/CreateFlow.png)
+
+After you input the name and description, click on the "Create" button to start designing your flow.
+
+## ![images/Flowdetails.png](/images/Flowdetails.png)
+
+### **Start designing your Conversation Flows**
+
+Once you have created a new flow, you will open the flow canvas. Here you will need to input a Trigger phrase to initiate the flow by clicking “Add Trigger” to initiate the trigger setup.
+
+![images/addtrigger.png](/images/addtrigger.png)
+
+The system will display the Trigger panel. You will need to input the phrases of maximum five phrases for the trigger. It automatically adds a new text box when you write your trigger.
+
+![images/addmoretrigger.png](/images/addmoretrigger.png)
+
+Close the edit panel, and the system will automatically save the configuration.
+
+After you have finished setting up the Trigger phrase. You can start to add nodes.
+
+### Add a Node
+
+Nodes are the building blocks of a flow and they determine how the conversation will progress. There are 4 main types of Nodes you can choose.
+
+<AccordionGroup>
+  <Accordion title="Collect Node" icon="bullet">
+    The Collect Node functions like an online form, capturing specific details from users before performing an action. It gathers data such as the number of rooms, check-in and check-out dates, room type, and more.
+
+    Star by clicking the “\+” button to trigger the Node option, then choose Collect Node.
+
+    The system will display the Collect Node edit panel where you will need to input the required details, starting with naming the field. Then optionally you can add a description to provide context for your variable.
+
+    ![images/collectnodedetail.png](/images/collectnodedetail.png)
+
+    Select the data/input type that defines your variable type, you can choose what variable you need to collect from user.
+
+    ![images/collectnodetype.png](/images/collectnodetype.png)
+
+    You can also map out or save user answers to the user profile data by utilizing the “Map to user profile” other than that you can also validate whether the field is mandatory or not by switch on the “Add custom validation”
+
+    ![images/collectnodeattribute.png](/images/collectnodeattribute.png)
+
+    Finally, click the "Add Message" button to customize the bot's prompts for collecting information. Here are a few examples:
+
+    ●      Instructions (e.g., “Please enter your check-in date”).
+
+    ●      Disclaimers (e.g., “Do not share sensitive personal information”).
+
+    ●      Option to include other message types like buttons or carousels.
+
+    ![images/collectnodeaddmessage.png](/images/collectnodeaddmessage.png)
+
+    To add additional questions or fields, select “Add Field.” To display the user’s previously submitted information for verification, select the “Replay the options to the visitor” checkbox.
+
+    \
+    ![images/collectnodeaddfield.png](/images/collectnodeaddfield.png)
+  </Accordion>
+  <Accordion title="Branch Node" icon="bullet">
+    A “Branch Node” branches the conversation flow based on specified conditions. Conditions depend on the user attribute (profile data) such as name, email and phone number.
+
+    ![images/branchnodecondition.png](/images/branchnodecondition.png)
+
+    You can have multiple branches defined by the condition. Once a condition is met, the flow moves directly to the connected path.
+
+    To activate the branch node, open the nodes option and click branch node. Then, input the conditions that users need to meet.
+
+    ![images/branchnodesetup.png](/images/branchnodesetup.png)
+
+    You can set more than one condition and each condition can have diverse answers based on your individual preferences.
+
+    ![images/branchnoderesponse.png](/images/branchnoderesponse.png)
+  </Accordion>
+  <Accordion title="Message Node" icon="bullet">
+    The Message Node defines how the agent communicates with the user. It supports three message types which are text, quick reply button, and media.
+
+    Open the Nodes option and click the “Message Node” to trigger the edit panel. You will find the text type as default.
+
+    ![images/messagenodetext.png](/images/messagenodetext.png)
+
+    Input your text, then you can choose smart rephrasing to give more dynamic & unique responses to the user by clicking the checkbox.
+
+    You can add more message elements such as quick reply and media by clicking the “Add Message Element” button. To save your setting, close the panel.
+
+    ![images/messagenodeelements.png](/images/messagenodeelements.png)
+  </Accordion>
+  <Accordion title="Action Node" icon="bullet">
+    The Action Node is responsible for executing backend logic, performing API calls, and/or generating responses dynamically based on the state of the conversation.
+
+    You can utilize action nodes in two use cases, which are “Email Action Node” and “HTTP Action Node”
+
+    **Email Action Node**
+
+    If you need to send an email to users then email action is the one to choose. To start by clicking on “Email Action Node” in the Nodes option, then the edit panel will appear. You will need to input details of the email you want to send.
+
+    ![images/emailactiondetail.png](/images/emailactiondetail.png)
+
+    You will be asked details such as recipient emails, subjects and body emails. Once you finish, close the edit panel to save your setup.
+
+    ![images/emailactionbody.png](/images/emailactionbody.png)
+
+    Once you have saved your email action and returned to the flow canvas, add two separate answers for the success or failure of the email delivery. To do this, click the "\+" button on each of the conditions.
+
+    ![images/emailactionresponse.png](/images/emailactionresponse.png)
+
+    **HTTP Action Node**
+
+    The "HTTP Action Node" is an action node that can be used to make an API call. To use it, go to the Nodes option and select "HTTP Action Node."
+
+    You will need to provide details of the action such as name and purpose to prevent confusion with other Nodes.
+
+    ![images/httpactiondetail.png](/images/httpactiondetail.png)
+
+    The most important part is in the API request where you must provide the API endpoint that should be called by the AI Agent to retrieve data to send updates.
+
+    ![images/httpactionapirequest.png](/images/httpactionapirequest.png)
+
+    Once you submit the API endpoint, you can test to call the API. If it's working you can save by closing the edit panel.
+
+    ![images/httpactiontestapi.png](/images/httpactiontestapi.png)
+
+    You need to make sure to add unique responses for both successful and unsuccessful API calls, similar to the email action setup.
+
+    ![images/apiactionresponse.png](/images/apiactionresponse.png)
+  </Accordion>
+</AccordionGroup>
+
+### Save & Publish
+
+Once you are satisfied with your flow, you can deploy it by clicking on the "Save & Publish" button. This will make your flow live and available to users.
+
+![images/saveflow.png](/images/saveflow.png)
+
+In conclusion, Flow Builder is a versatile tool with the potential to enhance user engagement and streamline various business processes. By starting with simple flows and progressively incorporating more intricate interactions, users can harness the tool's capabilities effectively. 
+
+The key to success lies in leveraging diverse steps to craft dynamic conversations, coupled with thorough testing before deployment. Whether it's customer support, sales, or marketing, Flow Builder offers a robust solution for creating tailored conversational flows that cater to a wide array of organizational needs.
+
+Are you interested in learning more about our products? Chat with our AI agent now, Ava, for instant assistance, direct inquiries, or to schedule a personalized demo. We would be glad to assist you and show you how our solutions can drive growth and efficiency for your business.
