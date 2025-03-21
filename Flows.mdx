@@ -1,5 +1,5 @@
 ---
-title: "Flow"
+title: "How to create flows"
 description: "AiChat's Flow Builder is a powerful tool that allows you to create advanced conversation flows. With Flow Builder, you can create more engaging and dynamic conversations that respond to user input in a variety of ways. This guide will offer you further details about flow and how to configure it."
 ---
 
@@ -33,109 +33,111 @@ After you have finished setting up the Trigger phrase. You can start to add node
 
 ### Add a Node
 
-Nodes are the building blocks of a flow and they determine how the conversation will progress. There are 4 main types of Nodes you can choose.
+Nodes are the building blocks of a flow and they determine how the conversation will progress. There are four main types of Nodes you can choose.
 
-<AccordionGroup>
-  <Accordion title="Collect Node" icon="bullet">
-    The Collect Node functions like an online form, capturing specific details from users before performing an action. It gathers data such as the number of rooms, check-in and check-out dates, room type, and more.
+**The Collect Node**
 
-    Star by clicking the “\+” button to trigger the Node option, then choose Collect Node.
+The Collect Node functions like an online form, capturing specific details from users before performing an action. It gathers data such as the number of rooms, check-in and check-out dates, room type, and more.
 
-    The system will display the Collect Node edit panel where you will need to input the required details, starting with naming the field. Then optionally you can add a description to provide context for your variable.
+Star by clicking the “\+” button to trigger the Node option, then choose Collect Node.
 
-    ![images/collectnodedetail.png](/images/collectnodedetail.png)
+The system will display the Collect Node edit panel where you will need to input the required details, starting with naming the field. Then optionally you can add a description to provide context for your variable.
 
-    Select the data/input type that defines your variable type, you can choose what variable you need to collect from user.
+![/images/collectnodedetail.png\+\_existingInIndexedDbMintlify](/images/collectnodedetail.png)
 
-    ![images/collectnodetype.png](/images/collectnodetype.png)
+Select the data/input type that defines your variable type, you can choose what variable you need to collect from user.
 
-    You can also map out or save user answers to the user profile data by utilizing the “Map to user profile” other than that you can also validate whether the field is mandatory or not by switch on the “Add custom validation”
+![/images/collectnodetype.png\+\_existingInIndexedDbMintlify](/images/collectnodetype.png)
 
-    ![images/collectnodeattribute.png](/images/collectnodeattribute.png)
+You can also map out or save user answers to the user profile data by utilizing the “Map to user profile” other than that you can also validate whether the field is mandatory or not by switch on the “Add custom validation”
 
-    Finally, click the "Add Message" button to customize the bot's prompts for collecting information. Here are a few examples:
+![/images/collectnodeattribute.png\+\_existingInIndexedDbMintlify](/images/collectnodeattribute.png)
 
-    ●      Instructions (e.g., “Please enter your check-in date”).
+Finally, click the "Add Message" button to customize the bot's prompts for collecting information.
 
-    ●      Disclaimers (e.g., “Do not share sensitive personal information”).
+<Tip>
+  Here are a few examples:
 
-    ●      Option to include other message types like buttons or carousels.
+  ●      Instructions (e.g., “Please enter your check-in date”).
 
-    ![images/collectnodeaddmessage.png](/images/collectnodeaddmessage.png)
+  ●      Disclaimers (e.g., “Do not share sensitive personal information”).
 
-    To add additional questions or fields, select “Add Field.” To display the user’s previously submitted information for verification, select the “Replay the options to the visitor” checkbox.
+  ●      Option to include other message types like buttons or carousels.
+</Tip>
 
-    \
-    ![images/collectnodeaddfield.png](/images/collectnodeaddfield.png)
-  </Accordion>
-  <Accordion title="Branch Node" icon="bullet">
-    A “Branch Node” branches the conversation flow based on specified conditions. Conditions depend on the user attribute (profile data) such as name, email and phone number.
+![/images/collectnodeaddmessage.png\+\_existingInIndexedDbMintlify](/images/collectnodeaddmessage.png)
 
-    ![images/branchnodecondition.png](/images/branchnodecondition.png)
+To add additional questions or fields, select “Add Field.” To display the user’s previously submitted information for verification, select the “Replay the options to the visitor” checkbox.
 
-    You can have multiple branches defined by the condition. Once a condition is met, the flow moves directly to the connected path.
+![/images/collectnodeaddfield.png\+\_existingInIndexedDbMintlify](/images/collectnodeaddfield.png)
 
-    To activate the branch node, open the nodes option and click branch node. Then, input the conditions that users need to meet.
+**Branch Node**\
+A “Branch Node” branches the conversation flow based on specified conditions. Conditions depend on the user attribute (profile data) such as name, email and phone number.
 
-    ![images/branchnodesetup.png](/images/branchnodesetup.png)
+![/images/branchnodecondition.png\+\_existingInIndexedDbMintlify](/images/branchnodecondition.png)
 
-    You can set more than one condition and each condition can have diverse answers based on your individual preferences.
+You can have multiple branches defined by the condition. Once a condition is met, the flow moves directly to the connected path.
 
-    ![images/branchnoderesponse.png](/images/branchnoderesponse.png)
-  </Accordion>
-  <Accordion title="Message Node" icon="bullet">
-    The Message Node defines how the agent communicates with the user. It supports three message types which are text, quick reply button, and media.
+To activate the branch node, open the nodes option and click branch node. Then, input the conditions that users need to meet.
 
-    Open the Nodes option and click the “Message Node” to trigger the edit panel. You will find the text type as default.
+![/images/branchnodesetup.png\+\_existingInIndexedDbMintlify](/images/branchnodesetup.png)
 
-    ![images/messagenodetext.png](/images/messagenodetext.png)
+You can set more than one condition and each condition can have diverse answers based on your individual preferences.
 
-    Input your text, then you can choose smart rephrasing to give more dynamic & unique responses to the user by clicking the checkbox.
+![/images/branchnoderesponse.png\+\_existingInIndexedDbMintlify](/images/branchnoderesponse.png)
 
-    You can add more message elements such as quick reply and media by clicking the “Add Message Element” button. To save your setting, close the panel.
+**Message Node**
 
-    ![images/messagenodeelements.png](/images/messagenodeelements.png)
-  </Accordion>
-  <Accordion title="Action Node" icon="bullet">
-    The Action Node is responsible for executing backend logic, performing API calls, and/or generating responses dynamically based on the state of the conversation.
+The Message Node defines how the agent communicates with the user. It supports three message types which are text, quick reply button, and media.
 
-    You can utilize action nodes in two use cases, which are “Email Action Node” and “HTTP Action Node”
+Open the Nodes option and click the “Message Node” to trigger the edit panel. You will find the text type as default.
 
-    **Email Action Node**
+![/images/messagenodetext.png\+\_existingInIndexedDbMintlify](/images/messagenodetext.png)
 
-    If you need to send an email to users then email action is the one to choose. To start by clicking on “Email Action Node” in the Nodes option, then the edit panel will appear. You will need to input details of the email you want to send.
+Input your text, then you can choose smart rephrasing to give more dynamic & unique responses to the user by clicking the checkbox.
 
-    ![images/emailactiondetail.png](/images/emailactiondetail.png)
+You can add more message elements such as quick reply and media by clicking the “Add Message Element” button. To save your setting, close the panel.
 
-    You will be asked details such as recipient emails, subjects and body emails. Once you finish, close the edit panel to save your setup.
+![/images/messagenodeelements.png\+\_existingInIndexedDbMintlify](/images/messagenodeelements.png)
 
-    ![images/emailactionbody.png](/images/emailactionbody.png)
+**Action Node**
 
-    Once you have saved your email action and returned to the flow canvas, add two separate answers for the success or failure of the email delivery. To do this, click the "\+" button on each of the conditions.
+The Action Node is responsible for executing backend logic, performing API calls, and/or generating responses dynamically based on the state of the conversation.
 
-    ![images/emailactionresponse.png](/images/emailactionresponse.png)
+You can utilize action nodes in two use cases, which are “Email Action Node” and “HTTP Action Node”.
 
-    **HTTP Action Node**
+1. **Email Action Node**
 
-    The "HTTP Action Node" is an action node that can be used to make an API call. To use it, go to the Nodes option and select "HTTP Action Node."
+   If you need to send an email to users then email action is the one to choose. To start by clicking on “Email Action Node” in the Nodes option, then the edit panel will appear. You will need to input details of the email you want to send.
 
-    You will need to provide details of the action such as name and purpose to prevent confusion with other Nodes.
+   ![/images/emailactiondetail.png\+\_existingInIndexedDbMintlify](/images/emailactiondetail.png)
 
-    ![images/httpactiondetail.png](/images/httpactiondetail.png)
+   You will be asked details such as recipient emails, subjects and body emails. Once you finish, close the edit panel to save your setup.
 
-    The most important part is in the API request where you must provide the API endpoint that should be called by the AI Agent to retrieve data to send updates.
+   ![/images/emailactionbody.png\+\_existingInIndexedDbMintlify](/images/emailactionbody.png)
 
-    ![images/httpactionapirequest.png](/images/httpactionapirequest.png)
+   Once you have saved your email action and returned to the flow canvas, add two separate answers for the success or failure of the email delivery. To do this, click the "\+" button on each of the conditions.
 
-    Once you submit the API endpoint, you can test to call the API. If it's working you can save by closing the edit panel.
+   ![/images/emailactionresponse.png\+\_existingInIndexedDbMintlify](/images/emailactionresponse.png)
+2. **HTTP Action Node**
 
-    ![images/httpactiontestapi.png](/images/httpactiontestapi.png)
+   The "HTTP Action Node" is an action node that can be used to make an API call. To use it, go to the Nodes option and select "HTTP Action Node."
 
-    You need to make sure to add unique responses for both successful and unsuccessful API calls, similar to the email action setup.
+   You will need to provide details of the action such as name and purpose to prevent confusion with other Nodes.
 
-    ![images/apiactionresponse.png](/images/apiactionresponse.png)
-  </Accordion>
-</AccordionGroup>
+   ![/images/httpactiondetail.png\+\_existingInIndexedDbMintlify](/images/httpactiondetail.png)
+
+   The most important part is in the API request where you must provide the API endpoint that should be called by the AI Agent to retrieve data to send updates.
+
+   ![/images/httpactionapirequest.png\+\_existingInIndexedDbMintlify](/images/httpactionapirequest.png)
+
+   Once you submit the API endpoint, you can test to call the API. If it's working you can save by closing the edit panel.
+
+   ![/images/httpactiontestapi.png\+\_existingInIndexedDbMintlify](/images/httpactiontestapi.png)
+
+   You need to make sure to add unique responses for both successful and unsuccessful API calls, similar to the email action setup.
+
+   ![/images/apiactionresponse.png\+\_existingInIndexedDbMintlify](/images/apiactionresponse.png)
 
 ### Save & Publish
 
@@ -144,5 +146,3 @@ Once you are satisfied with your flow, you can deploy it by clicking on the "Sav
 ![images/saveflow.png](/images/saveflow.png)
 
 In conclusion, Flow Builder enhances user engagement and streamlines business processes through versatile conversation flows.  Users can gather information, execute backend logic, define agent communication, and create conditional paths. Start with simple flows and gradually build complexity to create tailored conversational experiences.
-
-Are you interested in learning more about our products? Chat with our AI agent now, Ava, for instant assistance, direct inquiries, or to schedule a personalized demo. We would be glad to assist you and show you how our solutions can drive growth and efficiency for your business.
