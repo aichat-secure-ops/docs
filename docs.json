@@ -39,7 +39,18 @@
               "Test",
               "Test2"
             ]
-          }
+          },
+          {
+            "group": "Project",
+            "pages": [
+              "ProjectSetup&Management"
+            ]
+          },
+          {
+            "group": "Chatbot",
+            "pages": [
+              "KnowledgeBase",
+              "Flows"
         ]
       },
       {
