@@ -16,7 +16,7 @@
           {
             "group": "Get Started",
             "pages": [
-              "introduction",
+              "introduction_final",
               "bestpractice",
               "Onboarding",
               "development"
@@ -25,14 +25,14 @@
           {
             "group": "Project",
             "pages": [
-              "projectsetup&management"
+              "projectsetup"
             ]
           },
           {
             "group": "Chatbot",
             "pages": [
               "knowledgebase",
-              "flows"
+              "Flow"
             ]  
           },
           {
