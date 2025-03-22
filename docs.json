@@ -16,7 +16,7 @@
           {
             "group": "Get Started",
             "pages": [
-              "introduction_final",
+              "introduction",
               "bestpractice",
               "Onboarding"
             ]
