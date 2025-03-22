@@ -24,7 +24,7 @@
           {
             "group": "Project",
             "pages": [
-              "setupproject"
+              "setupproject",
               "overviewanalytics"
             ]
           },
