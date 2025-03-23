@@ -1,0 +1,71 @@
+---
+title: "Setting Up and Managing Agent Handoff Flow"
+description: "The Agent Handoff Flow in AiChat ensures a smooth transition from chatbot interactions to human agents when needed. This guide covers the setup, configuration, and management of the handoff process."
+---
+
+1. **Enabling Agent Handoff**
+
+- Navigate to Support Operations in the AiChat dashboard.
+- Toggle the Enable agent handoff option to activate handoff functionality.
+- Enter the Customer Support Email Address where notifications will be sent.
+- Click Save to apply the changes.
+- Click Goto handoff flow to configure the flow.
+
+1. **Configuring the Agent Handoff Flow**
+
+**2.1 Flow Overview**
+
+The Agent Handoff Flow is triggered when a user requests to speak with a human agent. The process includes:
+
+- Detecting user intent to transfer.
+- Collecting user information.
+- Sending an email notification.
+- Displaying confirmation messages to the user.
+
+**2.2 Steps in the Flow**
+
+**Step 1: Trigger the Flow**
+
+The flow is activated when a visitor uses predefined phrases such as:
+
+- "I want to talk to an agent."
+- "Can I speak with a representative?"
+- "Need help from a real person."
+- "Let me chat with a human agent."
+
+**Step 2: Collect User Information**
+
+The chatbot gathers the following details:
+
+- Name (Text input)
+- Email (Email input)
+- Phone Number (Phone input)
+- Reason for contacting support (Text input)
+
+Additional fields can be added if required.
+
+**Step 3: Send Email Notification**
+
+- The system sends an email to the customer support team with the collected user details.
+- If the email is successfully sent, the user receives a confirmation message.
+- If the email fails, an alternative message is displayed to inform the user.
+
+**Step 4: Provide User Feedback**
+
+- A message is sent to inform the user that support has been contacted.
+- If an issue occurs, the chatbot provides an error message and suggests alternative solutions.
+
+1. **Publishing the Flow**
+
+- Review the flow in the builder.
+- Click Save & Publish to activate the changes.
+- Ensure the handoff process is tested for smooth functionality.
+
+1. **Best Practices**
+
+- Use Clear Triggers: Ensure that user intents are well-defined to avoid false handoffs.
+- Collect Essential Information Only: Asking for too much information may lead to drop-offs.
+- Monitor and Optimize: Regularly check handoff performance and adjust the flow as needed.
+- Ensure Reliable Email Delivery: Test email notifications to ensure they reach the support team.
+
+By properly setting up the Agent Handoff Flow, you ensure that chatbot interactions seamlessly escalate to human agents when required, enhancing customer satisfaction and support efficiency.
