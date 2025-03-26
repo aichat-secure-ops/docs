@@ -24,7 +24,10 @@
           {
             "group": "Project",
             "pages": [
-              "setupproject",
+              "ps_chatbotconfiguration",
+              "ps_creatingnewproject",
+              "ps_profileconfiguration",
+              "ps_widgetcustom",
               "overviewanalytics"
             ]
           },
