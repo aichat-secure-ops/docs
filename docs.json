@@ -1,13 +1,13 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "AiChat",
   "colors": {
     "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "light": "#9741FE",
+    "dark": "#0DEF93"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "https://cdn.prod.website-files.com/677ca44598d8bae2633f6b99/67986c7e304687d7999b6faa_favicn.png",
   "navigation": {
     "tabs": [
       {
