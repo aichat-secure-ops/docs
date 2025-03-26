@@ -9,7 +9,7 @@
   },
   "appearance": {
     "default":"light"
-  }
+  },
   "favicon": "/fav_icon.png",
   "navigation": {
     "tabs": [
