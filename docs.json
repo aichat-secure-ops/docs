@@ -4,8 +4,8 @@
   "name": "AiChat",
   "colors": {
     "primary": "#9741FE",
-    "light": "#9741FE",
-    "dark": "#0DEF93"
+    "light": "#0DEF93",
+    "dark": "#9741FE"
   },
   "appearance": {
     "default":"light"
