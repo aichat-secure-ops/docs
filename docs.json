@@ -7,7 +7,10 @@
     "light": "#9741FE",
     "dark": "#0DEF93"
   },
-  "favicon": "https://cdn.prod.website-files.com/677ca44598d8bae2633f6b99/67986c7e304687d7999b6faa_favicn.png",
+  "appearance": {
+    "default":"light"
+  }
+  "favicon": "/fav_icon.png",
   "navigation": {
     "tabs": [
       {
@@ -107,21 +110,21 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "Feedback",
+        "href": "mailto:support@aichat.com"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "href": "https://app.aichat.com"
     }
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "facebook": "https://faceboo.com/aichatco",
+      "instagram": "https://ig/me/aichatco",
+      "linkedin": "https://linkedin.com/company/aichat"
     }
   }
 }
