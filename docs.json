@@ -14,9 +14,14 @@
         "tab": "Guides",
         "groups": [
           {
+            "group": "Get Started",
+            "pages": [
+              "introduction"
+           ]
+          },
+          {
             "group": "Create Your First Chatbot",
             "pages": [
-              "introduction",
               "SigningUpforanAiChatAccount",
               "Onboarding"
             ]
@@ -24,13 +29,13 @@
           {
             "group": "Knowledge Base and Automation",
             "pages": [
-              "knowledgebase"
+              "knowledgebase",
             ]
           },
           {
             "group": "Personalizing Your Chatbot",
             "pages": [
-              "ps_chatbotconfiguration",
+              "chatbotconfiguration",
               "customizingandinstallingwebwidget",
               "customersurvey"
             ]
