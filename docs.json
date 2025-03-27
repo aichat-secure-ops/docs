@@ -29,7 +29,7 @@
           {
             "group": "Knowledge Base and Automation",
             "pages": [
-              "knowledgebase",
+              "knowledgebase"
             ]
           },
           {
@@ -43,10 +43,8 @@
           {
             "group": "Billing & Subscription",
             "pages": [
-              "knowledgebase",
-              "Flows",
-              "customersurvey",
-              "livechathandover"
+              "subscriptionplans",
+              "conversationcredits"
             ]  
           },
           {
