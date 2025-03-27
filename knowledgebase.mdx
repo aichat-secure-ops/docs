@@ -8,11 +8,11 @@ description: "Building a well-structured knowledge base is essential for your ch
 Your website is often the primary source of information for making your chatbot smarter. To add a website:
 
 1. Access the Websites Section
+   - In the AiChat dashboard, go to Knowledge in the left menu.
 
-- In the AiChat dashboard, go to Knowledge in the left menu.
-- Click on Websites to access the website management page.
-
-1. Add Website
+Click on Websites to access the website management page.\
+\
+2. Add Website
 
 - Click the “**Add Website**” button.
 - Enter the main URL (e.g., [_https://www.aichat.com/_](https://www.aichat.com/)) you want the chatbot to learn from.
@@ -29,13 +29,12 @@ Your website is often the primary source of information for making your chatbot 
 
 ![Imageedit 15 5115267992 Jp](/images/imageedit_15_5115267992.jpg)
 
-By default, the platform syncs pages every 72 hours. The indexing status will be displayed as Started, Completed, or Failed to keep you informed.
-
 1. Manage Website Entries
 
 - Use the search bar to find specific websites.
 - Filter by status (e.g., Processing, Indexed, Failed).
-- The Last Synced At column indicates when the website was last updated in the chatbot's database.
+
+The Last Synced At column indicates when the website was last updated in the chatbot's database.
 
 1. Website Processing Status
 
@@ -46,6 +45,26 @@ Once a website is added, the system will process the data. The status may show:
 - Failed – An issue occurred; check the URL format or access permissions before re-adding.
 
 By integrating website content, you can ensure your chatbot remains up-to-date with the latest company information, FAQs, and product details.
+
+<Accordion title="My sub-pages are not crawled" icon="sparkles">
+  **If you're crawling subpages on a website but only one page is being crawled despite expecting multiple under the URL path, check the following:**
+
+  - **Geo-Blocking Restrictions:** Does your website have geo-blocking enabled? If our crawlers are outside your allowed geo-location countries, they may be unable to access your site or may be redirected to a fallback page.
+  - **Asynchronous JavaScript or Single-Page Application (SPA):** Does your website rely on asynchronous JavaScript or an SPA framework? If so, content may not be fully loaded when our crawlers attempt to access it.
+</Accordion>
+
+<Accordion title="The bot is not responding with knowledge from crawled pages" icon="sparkles">
+  **Your webpage's content may not be set up correctly for crawling.**
+
+  1. **Image-Based Content:** If your webpage contains only images, our crawler may not be able to extract information, as it currently supports text-based content.
+  2. **JavaScript Rendering:** If your webpage uses scripts to render content after our crawler has loaded the page, some content may not be captured.
+
+  You can upload this content as documents or text snippets.
+</Accordion>
+
+<Accordion title="Do I need to crawl pages that are localised to different languages?" icon="sparkles">
+  Our bot does not require the same knowledge in different languages, as we can translate it into the customer's language. However, if the content differs by language, please crawl the specific pages so our bot can recognize the differences. You can exclude localized pages using the 'Exclude' feature under Advanced Settings.
+</Accordion>
 
 **Uploading Documents**
 
@@ -62,13 +81,13 @@ The Documents feature allows you to upload and extract content from files, helpi
 - Select a file (supported formats: PDF, DOCX, TXT, etc.).
 - The system will process the content to extract relevant information.
 
-3. Manage Document Entries
+1. Manage Document Entries
 
 - Use the search bar to find specific documents.
 - Filter by status (e.g., Processing, Indexed, Failed).
 - The Last Synced At column indicates when the document was last updated in the chatbot’s database.
 
-4. Document Processing Status
+1. Document Processing Status
 
 Once a document is uploaded, the system will extract and index the content. The status may show:
 
@@ -89,7 +108,8 @@ Text snippets allow you to add or update chatbot content instantly. They are use
 1. Navigate to the Text Snippets Section
 
 - In the AiChat dashboard, go to Knowledge in the left menu.
-- Click on Text Snippets to access the snippet management interface.
+
+Click on Text Snippets to access the snippet management interface.
 
 1. Create a New Snippet
 
