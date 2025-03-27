@@ -30,14 +30,13 @@
           {
             "group": "Personalizing Your Chatbot",
             "pages": [
-              "chatbotconfiguration",
-              "customizingandinstallingwebwidget",
               "ps_chatbotconfiguration",
+              "customizingandinstallingwebwidget",
               "customersurvey"
             ]
           },
           {
-            "group": "Chatbot",
+            "group": "Billing & Subscription",
             "pages": [
               "knowledgebase",
               "Flows",
@@ -53,10 +52,10 @@
             ]
           },
           {
-            "group": "Test",
+            "group": "Team Management",
             "pages": [
-              "Test",
-              "Test2"
+              "inviteteam",
+              "removeteam"
             ]
           }
         ]
