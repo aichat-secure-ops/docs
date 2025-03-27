@@ -1,16 +1,13 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "AiChat",
+  "name": "Mint Starter Kit",
   "colors": {
-    "primary": "#9741FE",
-    "light": "#0DEF93",
-    "dark": "#9741FE"
+    "primary": "#16A34A",
+    "light": "#07C983",
+    "dark": "#15803D"
   },
-  "appearance": {
-    "default":"light"
-  },
-  "favicon": "/fav_icon.png",
+  "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
       {
@@ -27,9 +24,9 @@
           {
             "group": "Project",
             "pages": [
-              "ps_chatbotconfiguration",
               "ps_creatingnewproject",
               "ps_profileconfiguration",
+              "ps_chatbotconfiguration",
               "ps_widgetcustom",
               "overviewanalytics"
             ]
@@ -84,33 +81,47 @@
       }
     ],
     "global": {
+      "anchors": [
+        {
+          "anchor": "Documentation",
+          "href": "https://mintlify.com/docs",
+          "icon": "book-open-cover"
+        },
+        {
+          "anchor": "Community",
+          "href": "https://mintlify.com/community",
+          "icon": "slack"
+        },
+        {
+          "anchor": "Blog",
+          "href": "https://mintlify.com/blog",
+          "icon": "newspaper"
+        }
+      ]
     }
   },
   "logo": {
-    "light": "/logo/logo-light.svg",
-    "dark": "/logo/logo-dark.svg"
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
   },
   "navbar": {
     "links": [
       {
-        "label": "Feedback",
-        "href": "mailto:support@aichat.com"
-      },
-      {
-        "label": "Pricing Plans",
-        "href": "https://aichat.com/pricing"
+        "label": "Support",
+        "href": "mailto:hi@mintlify.com"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Dashboard",
-      "href": "https://app.aichat.com"
+      "href": "https://dashboard.mintlify.com"
     }
   },
   "footer": {
     "socials": {
-      "facebook": "https://www.facebook.com/aichat.co/",
-      "linkedin": "https://sg.linkedin.com/company/aichat-pte-ltd"
+      "x": "https://x.com/mintlify",
+      "github": "https://github.com/mintlify",
+      "linkedin": "https://linkedin.com/company/mintlify"
     }
   }
 }
