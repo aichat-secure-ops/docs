@@ -95,6 +95,10 @@
       {
         "label": "Feedback",
         "href": "mailto:support@aichat.com"
+      },
+      {
+        "label": "Pricing Plans",
+        "href": "https://aichat.com/pricing"
       }
     ],
     "primary": {
