@@ -14,21 +14,26 @@
         "tab": "Guides",
         "groups": [
           {
-            "group": "Get Started",
+            "group": "Create Your First Chatbot",
             "pages": [
               "introduction",
-              "bestpractice",
+              "SigningUpforanAiChatAccount",
               "Onboarding"
             ]
           },
           {
-            "group": "Project",
+            "group": "Knowledge Base and Automation",
             "pages": [
-              "ps_creatingnewproject",
-              "ps_profileconfiguration",
+              "knowledgebase"
+            ]
+          },
+          {
+            "group": "Personalizing Your Chatbot",
+            "pages": [
+              "chatbotconfiguration",
+              "customizingandinstallingwebwidget",
               "ps_chatbotconfiguration",
-              "ps_widgetcustom",
-              "overviewanalytics"
+              "customersurvey"
             ]
           },
           {
@@ -43,12 +48,8 @@
           {
             "group": "Essentials",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/settings",
-              "essentials/navigation",
-              "essentials/reusable-snippets"
+              "dashboardoverview",
+              "Conversation"
             ]
           },
           {
