@@ -48,6 +48,12 @@
             ]
           },
           {
+            "group": "Testing Your Chatbot",
+            "pages": [
+              "testing-chatbot"
+            ]
+          },
+          {
             "group": "Billing & Subscription",
             "pages": [
               "subscriptionplans",
