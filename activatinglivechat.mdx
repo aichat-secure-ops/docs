@@ -16,7 +16,9 @@ Once the customer support email is saved, the handoff flow configuration will ap
 
 ![Customersupporthanddoff Pn](/images/customersupporthanddoff.png)
 
-Click **Go to handoff flow** to create your preferred live chat agent flow. This flow will be used to manage live chat interactions seamlessly. See how to configure [**Flow**](https://help.aichat.com/Flows).
+Click **Go to handoff flow** to create your preferred live chat agent flow. This flow will be used to manage live chat interactions seamlessly. 
+
+We have already set up pre-defined fields to collect users' Names, Phone numbers, Emails, and inquiries. Feel free to modify them to suit your needs. See how to configure [**Flow**](https://help.aichat.com/Flows).
 
 ![Customerhandoffflownew Pn](/images/customerhandoffflownew.png)
 
@@ -26,75 +28,74 @@ If you want to deactivate the support operations feature, simply toggle the swit
 
 ![Supportoperationsoff Pn](/images/supportoperationsoff.png)
 
-If you disable the support operations feature, the handoff flow configuration will no longer be visible on the dashboard.
+If you deactivate the support operations feature, the handoff flow configuration will no longer be visible on the dashboard. However, the flow you configured will remain but be deactivated so it can be used again if you re-enable agent handoff.
 
-## Setting Up and Managing Agent Handoff Flow
+## **Configuring the Agent Handoff Flow**
 
-The Agent Handoff Flow in AiChat ensures a smooth transition from chatbot interactions to human agents when needed. This guide covers the setup, configuration, and management of the handoff process.
+### **1. Understanding When to Customize the Agent Handoff Flow**
 
-**1. Enabling Agent Handoff**
+Before setting up the handoff flow, consider customizing it in the following scenarios:
 
-- Navigate to Support Operations in the AiChat dashboard.
-- Toggle the Enable agent handoff option to activate handoff functionality.
-- Enter the Customer Support Email Address where notifications will be sent.
-- Click Save to apply the changes.
-- Click Goto handoff flow to configure the flow.
+- **Expanding User Expressions**: If users commonly phrase requests differently, add more trigger phrases to improve detection.
+- **Collecting Additional Information**: If agents need more details before assisting users, include additional fields in the information-gathering step.
+- **Adjusting Messaging**: Modify confirmation or error messages to align with your support team’s communication style.
+- **Optimizing Email Notifications**: Customize the email content to provide agents with more context, reducing back-and-forth communication.
 
-1. **Configuring the Agent Handoff Flow**
+### **2. Steps in the Flow**
 
-**2.1 Flow Overview**
+#### **Step 1: Triggering the Flow**
 
-The Agent Handoff Flow is triggered when a user requests to speak with a human agent. The process includes:
-
-- Detecting user intent to transfer.
-- Collecting user information.
-- Sending an email notification.
-- Displaying confirmation messages to the user.
-
-**2.2 Steps in the Flow**
-
-**Step 1: Trigger the Flow**
-
-The flow is activated when a visitor uses predefined phrases such as:
+The handoff flow activates when a visitor uses specific phrases such as:
 
 - “I want to talk to an agent.”
 - “Can I speak with a representative?”
 - “Need help from a real person.”
 - “Let me chat with a human agent.”
 
-**Step 2: Collect User Information**
+#### **When to Customize:**
 
-The chatbot gathers the following details:
+- If users frequently use other phrases, add more expressions to improve recognition and avoid missed handoff requests.
 
-- Name (Text input)
-- Email (Email input)
-- Phone Number (Phone input)
-- Reason for contacting support (Text input)
+#### **Step 2: Collecting User Information**
 
-Additional fields can be added if required.
+By default, the chatbot collects the following details before transferring to an agent:
 
-**Step 3: Send Email Notification**
+- **Name** (Text input)
+- **Email** (Email input)
+- **Phone Number** (Phone input)
+- **Reason for contacting support** (Text input)
 
-- The system sends an email to the customer support team with the collected user details.
+#### **When to Customize:**
+
+- If your support team needs extra information (e.g., order number, account ID), add relevant fields to the form.
+- If fewer details are required, remove unnecessary fields to reduce friction for users.
+
+#### **Step 3: Sending Email Notifications**
+
+The system automatically sends an email to the support team with the collected user details.
+
 - If the email is successfully sent, the user receives a confirmation message.
-- If the email fails, an alternative message is displayed to inform the user.
+- If the email fails, an alternative message informs the user.
 
-**Step 4: Provide User Feedback**
+#### **When to Customize:**
 
-- A message is sent to inform the user that support has been contacted.
-- If an issue occurs, the chatbot provides an error message and suggests alternative solutions.
+- If your team prefers a different notification method (e.g., Slack alerts, CRM integration), adjust this step accordingly.
+- If email notifications need a specific format, modify the content to include essential details.
 
-1. **Publishing the Flow**
+#### **Step 4: Providing User Feedback**
 
-- Review the flow in the builder.
-- Click Save & Publish to activate the changes.
-- Ensure the handoff process is tested for smooth functionality.
+Once the request is submitted:
 
-1. **Best Practices**
+- The chatbot informs the user that support has been contacted.
+- If an issue occurs, an error message appears, suggesting alternative solutions.
 
-- Use Clear Triggers: Ensure that user intents are well-defined to avoid false handoffs.
-- Collect Essential Information Only: Asking for too much information may lead to drop-offs.
-- Monitor and Optimize: Regularly check handoff performance and adjust the flow as needed.
-- Ensure Reliable Email Delivery: Test email notifications to ensure they reach the support team.
+#### **When to Customize:**
 
-By properly setting up the Agent Handoff Flow, you ensure that chatbot interactions seamlessly escalate to human agents when required, enhancing customer satisfaction and support efficiency.
+- If users require estimated response times, update the confirmation message accordingly.
+- If alternative contact methods exist (e.g., phone support), include them in the fallback message.
+
+## **Publishing the Flow**
+
+1. Review the flow in the builder.
+2. Click **Save & Publish** to apply the changes.
+3. Test the handoff process to ensure smooth functionality.
