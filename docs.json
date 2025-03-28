@@ -29,7 +29,9 @@
           {
             "group": "Knowledge Base and Automation",
             "pages": [
-              "knowledgebase"
+              "knowledgebase",
+              "productcatalog",
+              "Flows"
             ]
           },
           {
@@ -37,6 +39,7 @@
             "pages": [
               "chatbotconfiguration",
               "customizingandinstallingwebwidget",
+              "activatinglivechat",
               "customersurvey"
             ]
           },
