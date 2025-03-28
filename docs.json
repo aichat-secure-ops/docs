@@ -3,14 +3,14 @@
   "theme": "mint",
   "name": "AiChat",
   "colors": {
-    "primary": "#9741FE",
+    "primary": "#0DEF93",
     "light": "#9741FE",
     "dark": "#0DEF93"
   },
   "appearance": {
     "default": "light"
   },
-  "favicon": "/fav_icon.png",
+  "favicon": "/favicon.ico",
   "navigation": {
     "tabs": [
       {
