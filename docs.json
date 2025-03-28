@@ -85,8 +85,8 @@
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://app.aichat.com"
+      "label": "Sign-up",
+      "href": "https://app.aichat.com/auth/register"
     }
   },
   "footer": {
