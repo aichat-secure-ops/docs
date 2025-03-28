@@ -13,7 +13,7 @@ Use a **Collect Node** to gather user information. Then, use a **Send HTTP API**
 
 - **Leave a Message or Contact Us**
 
-Collect customer details using **Collect Node **so you or the customer service team can follow up. This is especially useful when a Live Agent is unavailable.
+Collect customer details using \*\*Collect Node \*\*so you or the customer service team can follow up. This is especially useful when a Live Agent is unavailable.
 
 Now, let's use the second scenario as an example to create a flow.
 
@@ -33,9 +33,19 @@ After you input the name and description, click on the "Create" button to start 
 
 ### Start designing your Conversation Flows
 
-Once you have created a new flow, you will open the flow canvas. Here you will need to input a Trigger phrase to initiate the flow by clicking “Add Trigger” to initiate the trigger setup.
+Once you have created a new flow, you will open the flow canvas.
+
+The key components of a flow usually starts with:
+
+Trigger → Do some action like collect information → Send collected information somewhere
+
+Here you will need to input a Trigger phrase to initiate the flow by clicking “Add Trigger” to initiate the trigger setup.
 
 ![images/addtrigger.png](/images/addtrigger.png)
+
+<Info>
+  Trigger nodes: they define when chatbot will initiate the flow. You can define user phrases and variations that expresses the same user intent that will trigger this flow.
+</Info>
 
 The system will display the Trigger panel. You will need to input the phrases of maximum five phrases for the trigger. It automatically adds a new text box when you write your trigger.
 
@@ -56,6 +66,10 @@ The Collect Node functions like an online form, capturing specific details from 
 Star by clicking the “\+” button to trigger the Node option, then choose Collect Node.
 
 The system will display the Collect Node edit panel where you will need to input the required details, starting with naming the field. Then optionally you can add a description to provide context for your variable.
+
+<Tip>
+  Describe the purpose of the field, like "starting date of hotel check-in", "number of nights to stay". Our AI Agents would be able to better understand the context of the field to interpret different ways a user may say the same thing.
+</Tip>
 
 ![/images/collectnodedetail.png\+\_existingInIndexedDbMintlify](/images/collectnodedetail.png)
 
@@ -92,7 +106,11 @@ A “Branch Node” branches the conversation flow based on specified conditions
 
 You can have multiple branches defined by the condition. Once a condition is met, the flow moves directly to the connected path.
 
-To activate the branch node, open the nodes option and click branch node. Then, input the conditions that users need to meet.
+To activate the branch node, open the nodes option and click branch node. Then, input the conditions that users need to meet. If your conditions are complicated to define using simple pre-defined conditions, you can write out the qualifying criteria using **Custom.**
+
+<Tip>
+  Use the Branch Node to provide unique responses based on specific conditions. For example, if you want to tailor replies depending on whether a user has already submitted their phone number, this node helps you customize the answers accordingly.
+</Tip>
 
 ![/images/branchnodesetup.png\+\_existingInIndexedDbMintlify](/images/branchnodesetup.png)
 
@@ -105,6 +123,10 @@ You can set more than one condition and each condition can have diverse answers 
 The Message Node defines how the agent communicates with the user. It supports three message types which are text, quick reply button, and media.
 
 Open the Nodes option and click the “Message Node” to trigger the edit panel. You will find the text type as default.
+
+<Tip>
+  Use **Message node** for a confirmation message or thank-you message after submission of users information or feedback. For example, "_Thank you for your interest in Aichat. Our consultants will get back to you on your inquiry_"**.**
+</Tip>
 
 ![/images/messagenodetext.png\+\_existingInIndexedDbMintlify](/images/messagenodetext.png)
 
@@ -122,7 +144,7 @@ You can utilize action nodes in two use cases, which are “Email Action Node”
 
 1. **Email Action Node**
 
-   If you need to send an email to users then email action is the one to choose. To start by clicking on “Email Action Node” in the Nodes option, then the edit panel will appear. You will need to input details of the email you want to send.
+   If you need to send an email to users, or one of your team members, then email action is the one to choose. To start by clicking on “Email Action Node” in the Nodes option, then the edit panel will appear. You will need to input details of the email you want to send.
 
    You will be asked details such as recipient emails, subjects and body emails. Once you finish, close the edit panel to save your setup.
 
@@ -140,6 +162,8 @@ You can utilize action nodes in two use cases, which are “Email Action Node”
    ![/images/httpactiondetail.png\+\_existingInIndexedDbMintlify](/images/httpactiondetail.png)
 
    The most important part is in the API request where you must provide the API endpoint that should be called by the AI Agent to retrieve data to send updates.
+   - You can configure a POST method with JSON as body.
+   - You can also include Basic or Bearer token under Authorization Headers if required, and add other header options.
 
    ![/images/httpactionapirequest.png\+\_existingInIndexedDbMintlify](/images/httpactionapirequest.png)
 
