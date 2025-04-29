@@ -100,5 +100,10 @@
       "facebook": "https://facebook.com/aichat.co",
       "linkedin": "https://sg.linkedin.com/company/aichat-pte-ltd"
     }
+  },
+  "integrations":{
+    "ga4": {
+        "measurementId": "G-KXBQDC077"
+    }
   }
 }
