@@ -1,0 +1,1 @@
+<script type="module" src="https://widget.aichat.com/dist/ai-chat-widget.js" id="ai-chat-widget" data-api-key="cm7vkyu6604or16rbrd8xsopb" data-org-id="organization-live-048536b2-8d20-4d81-8b20-7c3ae1e21f32"></script>
