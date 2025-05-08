@@ -50,7 +50,7 @@
           {
             "group": "WhatsApp Configuration",
             "pages": [
-              "activatingwhatsappintegration",
+              "GuidetoIntegratingWhatsApp",
               "activatingwhatsappbroadcast",
               "whatsappFAQs"
             ]
