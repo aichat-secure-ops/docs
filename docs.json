@@ -45,6 +45,14 @@
               "customizingandinstallingwebwidget",
               "activatinglivechat",
               "customersurvey"
+             ]
+          },
+          {
+            "group": "WhatsApp Configuration",
+            "pages": [
+              "activatingwhatsappintegration",
+              "activatingwhatsappbroadcast",
+              "whatsappFAQs"
             ]
           },
           {
