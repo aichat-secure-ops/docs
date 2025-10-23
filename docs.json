@@ -83,6 +83,18 @@
             ]
           }
         ]
+      },
+      {
+        "tab": "App Integrations",
+         "groups": [
+          {
+            "group": "HubSpot",
+            "pages": [
+              "introduction",
+              "video-walkthrough"
+            ]
+          }
+         ]
       }
     ]
   },
