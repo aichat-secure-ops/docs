@@ -95,6 +95,35 @@
             ]
           }
          ]
+      },
+      {
+        "tab": "Developer tools",
+        "icon": "square-terminal",
+        "menu": [
+          {
+            "item": "API reference",
+            "icon": "rocket",
+            "groups": [
+              {
+                "group": "Core endpoints",
+                "icon": "square-terminal",
+                "pages": [
+                  "api-reference/endpoint/get",
+                  "api-reference/endpoint/create",
+                  "api-reference/endpoint/delete"
+                ]
+              }
+            ]
+          },
+          {
+            "item": "Snippets",
+            "icon": "code",
+            "description": "Snippets rock.",
+            "pages": [
+              "snippets/snippet-intro"
+            ]
+          }
+        ]
       }
     ]
   },
