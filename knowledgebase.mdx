@@ -1,50 +1,67 @@
 ---
 title: "Setting Up Your Knowledge Base"
-description: "Building a well-structured knowledge base is essential for your chatbot, as it serves as the central repository of information for your company or organization. Ensure that all content is clear, readable, and comprehensive so the chatbot can accurately understand user inquiries and provide relevant responses. Our platform supports data indexing from websites, PDFs, text snippets, and Q&A to enhance your chatbot’s intelligence."
+description: "The Knowledge Base is the core information repository that powers your AiChat chatbot. A well-structured, clear, and comprehensive knowledge base is crucial for ensuring your chatbot can accurately interpret user inquiries and deliver helpful, relevant responses."
 ---
 
-## **Indexing a Website**
+# 1. Knowledge Base Content Guidelines
 
-Your website is often the primary source of information for making your chatbot smarter. To add a website:
+Before indexing any data, ensure your source materials adhere to the following principles:
 
-1. Access the Websites Section
+## Clarity and Readability
 
-- In the AiChat dashboard, go to Knowledge in the left menu.
-- Click on Websites to access the website management page.
+- **Simple Language:** Use straightforward terminology. Avoid overly complex jargon unless absolutely necessary and clearly defined.
+- **Structured Formatting:** Utilize headings, bullet points, and numbered lists within your source documents (e.g., PDFs, website content). This improves readability for both human users and the chatbot's indexing process.
+- **Note**: images containing text cannot be extracted by our bot
 
-2. Add Website
+## Comprehensiveness and Accuracy
 
-- Click the “**Add Website**” button.
-- Enter the main URL (e.g., [_https://www.aichat.com/_](https://www.aichat.com/)) you want the chatbot to learn from.
+- **Cover Key Topics:** Ensure the knowledge base covers all major aspects of your products, services, policies, and frequently asked questions.
+- **Up-to-Date Information:** Regularly review and update your source content to maintain accuracy. Outdated information leads to poor chatbot performance and user frustration.
+- **Internal Consistency:** Verify that information across different documents or sections does not contradict itself.
 
-![Imageedit 9 3983494659 Jp](/images/imageedit_9_3983494659.jpg)
+# 2. Supported Data Sourcing Methods
 
-- Toggle “**Sync Subpages**” to automatically sync all pages under the same domain (if needed).
+Our AiChat platform supports indexing information from multiple source types to build a robust knowledge base:
 
-  ![Imageedit 11 2193807944 Jp](/images/imageedit_11_2193807944.jpg)
+| Data Source                         | Description                                                           | Best Use Case                                                                         |
+| :---------------------------------- | :-------------------------------------------------------------------- | :------------------------------------------------------------------------------------ |
+| **Website Crawl (URL)**             | Indexing content directly from specified public web pages or domains. | Dynamic content, detailed product documentation, or broad site-wide information.      |
+| **Documents**                       | Uploading and indexing content from PDF, Word and CSV files.          | Policy documents, user manuals, long-form guides, or technical specifications.        |
+| **Text Snippets**                   | Manually entering short pieces of text directly into the platform.    | Specific definitions, disclaimers, or information not yet captured in other formats.  |
+| **Q&A Pairs (Question and Answer)** | Structuring information as specific question-and-answer pairs.        | Addressing Frequently Asked Questions (FAQs) that require precise, defined responses. |
 
-  In **Advanced Settings**, you can:
-- Add specific URLs to be included in addition to the main URL.
-- Use glob expressions (e.g., /\*) to exclude all pages that begin with a certain prefix.
+## Crawling Websites
 
-![Imageedit 15 5115267992 Jp](/images/imageedit_15_5115267992.jpg)
+Indexing a Website (Crawl)
 
-3. Manage Website Entries
+1. Go to the **Knowledge Base** tab in the left-hand menu.
+2. Click on **Websites**.
 
-- Use the search bar to find specific websites.
-- Filter by status (e.g., Processing, Indexed, Failed).
+Adding a New Data Source
 
-The Last Synced At column indicates when the website was last updated in the chatbot's database.
+1. Click the **"Add Website"** button.
+2. Enter the main URL you want the chatbot to learn from (e.g., [https://www.yourcompany.com/]
 
-4. Website Processing Status
+Toggle **“Sync Subpages”** to automatically sync all pages under the same URL path you provided (if needed). Advanced Settings allow you to add extra URLs to be included or exclude pages using glob expressions (e.g., /\*).
 
-Once a website is added, the system will process the data. The status may show:
+![Syncing your web page](/Syncingyourwebpage.gif)
 
-- Processing – The chatbot is extracting information from the website.
-- Indexed – The website data is successfully added and available for chatbot responses.
-- Failed – An issue occurred; check the URL format or access permissions before re-adding.
+You can monitor and manage your submitted sites:
 
-By integrating website content, you can ensure your chatbot remains up-to-date with the latest company information, FAQs, and product details.
+- **Search and Filter:** Quickly find sites by searching or filtering by processing status (e.g., Indexed, Failed).
+- **Last Synced At:** Shows the time of the most recent data update from the website.
+
+#### Website Statuses Explained
+
+| **Status**     | **Description**                                                                          |
+| :------------- | :--------------------------------------------------------------------------------------- |
+| **Processing** | The chatbot is currently extracting and analyzing content from the website.              |
+| **Indexed**    | Content has been successfully integrated and is now used by the chatbot for responses.   |
+| **Failed**     | An error occurred. Check the URL format and access permissions, then re-add the website. |
+
+**Benefit:** Integrating websites ensures your chatbot uses the latest company information, FAQs, and product details without manual data updates.
+
+### Crawling Website FAQ
 
 <Accordion title="My sub-pages are not crawled" icon="sparkles">
   **If you're crawling subpages on a website but only one page is being crawled despite expecting multiple under the URL path, check the following:**
@@ -68,120 +85,108 @@ By integrating website content, you can ensure your chatbot remains up-to-date w
 
 ## **Uploading Documents**
 
-The Documents feature allows you to upload and extract content from files, helping the chatbot respond accurately based on structured knowledge. This is useful for handling FAQs, policy documents, product manuals, and other reference materials.
+The Documents feature allows you to upload and extract content from files, helping the chatbot respond accurately based on structured knowledge. This is useful for handling policy documents, product manuals, long-form guides, and other reference materials.
 
-1. Access the Documents Section
+![Adding Documents](/images/AddingDocuments.gif)
 
-- In the AiChat dashboard, go to Knowledge in the left menu.
-- Click on Documents to access the document management page.
+1. **Access the Documents Section**\
+   Under the dashboard, go to the **Knowledge Base** tab from the left-hand menu. Click on Documents to access the document management page.
+2. **Upload a Document for Chatbot Knowledge**
+   - Click the **"Add Document"** button.
+   - Select a file (supported formats: PDF, DOCX, TXT, CSV.).
+   - The system will process the content to extract relevant information.
+3. **Manage Document Entries**\
+   Once uploaded, you can manage and monitor your documents from the Documents Section:
+   - Use the search bar to find specific documents.
+   - Filter by status (e.g., Processing, Indexed, Failed).
+   - The **Last Synced At** column indicates when the document was last updated in the chatbot’s database.
 
-2. Upload a Document for Chatbot Knowledge
+#### Document Statuses Explained
 
-- Click the "Add Document" button (green button).
-- Select a file (supported formats: PDF, DOCX, TXT, etc.).
-- The system will process the content to extract relevant information.
-
-3. Manage Document Entries
-
-- Use the search bar to find specific documents.
-- Filter by status (e.g., Processing, Indexed, Failed).
-- The Last Synced At column indicates when the document was last updated in the chatbot’s database.
-
-4. Document Processing Status
-
-Once a document is uploaded, the system will extract and index the content. The status may show:
-
-- Processing – The chatbot is analyzing the document content.
-- Indexed – The document data is successfully added and available for chatbot responses.
-- Failed – An issue occurred; check the file format or content and try again.
-
-![Imageedit 18 5834209164 Jp](/images/imageedit_18_5834209164.jpg)
-
-![Screenshot2025 03 22174236 Pn](/images/Screenshot2025-03-22174236.png)
+| **Status**     | **Description**                                                                                                                             |
+| :------------- | :------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Processing** | The chatbot is analyzing the document content.                                                                                              |
+| **Indexed**    | The document data is successfully added and available for chatbot responses.                                                                |
+| **Failed**     | An issue occurred during indexing. Check the file format or content and ensure it is not password-protected before attempting to re-upload. |
 
 By integrating document-based knowledge, you ensure that your chatbot provides accurate and well-structured responses based on official company materials.
 
-## **Using Text Snippets**
+## Using Text Snippets
 
-Text snippets allow you to add or update chatbot content instantly. They are useful for last-minute updates, time-sensitive announcements, or temporary information that may need quick modifications. Follow these steps to create a text snippet in AiChat:
+Text snippets allow you to add or update chatbot content instantly. They are useful for last-minute updates, time-sensitive announcements, or temporary information that may need quick modifications.
 
-1. Navigate to the Text Snippets Section
+![Indexing Snippets](/images/IndexingSnippets.gif)
 
-- In the AiChat dashboard, go to Knowledge in the left menu.
-- Click on Text Snippets to access the snippet management interface.
+1. **Go to the Text Snippets Section:**
+   - In your AiChat dashboard, look at the menu on the left.
+   - Click on the **Knowledge Base** tab.
+   - Select **Text Snippets** to open the management screen.
+2. **Start a New Snippet:**
+   - Click the **"Add Snippet"** button. A new editing window will pop up.
+3. **Give it a Title:**
+   - Type a clear and descriptive title in the **Title** field. This helps you and your team easily find the snippet later.
+4. **Write Your Content:**
+   - Enter or paste your text into the main text box.
+   - Use the formatting tools (like the bold 'B', italic 'I', and underline 'U') to make your text easy to read, or to add links and lists.
+5. **Keep it Short:**
+   - Snippets have a limit of **1,000 characters**.
+   - A character counter at the bottom will help you track how much space you have left.
 
-2. Create a New Snippet
+**Finishing Up:**
 
-- Click the "Add Snippet" and a new snippet editor will appear, allowing you to input content.
+- Click the green **"Save"** button to store your new snippet.
+- If you change your mind and don't want to save, click **"Cancel"** to discard your work.
 
-3. Add a Title
+## Manage Snippet Entries
 
-- Enter a clear and descriptive title for the snippet in the Title field. The title helps organize and retrieve snippets easily.
+Once created, you can manage and monitor your text snippets from the Snippets Section:
 
-4. Input Snippet Content
+- Use the search bar to find specific snippets by title or content.
+- The **Last Updated At** column indicates when the snippet was last modified.
+- You can **Edit** or **Delete** existing snippets using the action icons.
 
-- Type or paste the text content into the main text box.
-- Use the formatting toolbar to bold, italicize, underline, or add lists, links, and other text styles as needed.
+Text snippets are indexed immediately, ensuring that critical, time-sensitive information is instantly available for chatbot use.
 
-5. Check Character Limit
+## Managing Q&A: Giving Your Chatbot Direct Answers
 
-- The system allows up to 1,000 characters per snippet. The character counter at the bottom helps track the remaining space.
+The Q&A section is where you teach your chatbot specific, accurate answers to common questions. This method helps your chatbot respond reliably to user queries without having to guess or rely only on information it crawls from websites or documents.
 
-6. Save or Cancel Changes
+![Add Import Qn A](/images/Add_ImportQnA.gif)
 
-- Click "Save" (green button) to store the snippet.
-- If you do not want to save, click "Cancel" to discard changes.
+**How to Access the Q&A Section**
 
-![Imageedit 25 6328530453 Jp](/images/imageedit_25_6328530453.jpg)
+1. In your **AiChat dashboard**, look at the left menu and go to **Knowledge**.
+2. Click on **Q&A** to open the management page.
 
-![Screenshot2025 03 22175822 Pn](/images/Screenshot2025-03-22175822.png)
+You can add Q&A pairs one by one or upload many at once.
 
-Once saved, the text snippet will be indexed and available for the chatbot to retrieve when responding to relevant user queries. Always review the indexing status to ensure it is successfully processed.
+#### Manually Add Q&A:
 
-## **Managing Q&A**
+1. Click the green **"Add Q&A"** button in the top right corner.
+2. Type the exact **question** a user might ask.
+3. Type the precise **answer** the chatbot should give.
+4. Click **Save**.
 
-The **Q&A** section allows you to define specific question-answer pairs that improve your chatbot's response accuracy. This feature is useful for providing direct answers to user queries instead of relying solely on data crawling from websites, documents, or text snippets.
+#### Bulk Upload via CSV:
 
-1. Navigate to the Q&A Section
+This is the fastest way to add many pairs at once.
 
-- In the AiChat dashboard, go to Knowledge in the left menu.
-- Click on Q&A to access the question-answer management page.
+1. Click the **"Import CSV"** button.
+2. Upload a CSV file that is formatted correctly with your questions and answers.
+3. The system will automatically process and add all the new entries.
 
-2. Add a New Q&A Pair
+Search and Manage Existing Q&A Entries
 
-There are two ways to add Q&A pairs:
+- **Search Bar:** Use the search bar to quickly find any specific Q&A pair.
+- **Filter Entries:** You can filter the list based on their status (e.g., Processing, Indexed, Failed).
+- **Last Synced:** Check the **last synced** column to see when an entry was last updated or processed.
 
-A. Manually Add Q&A
+#### Ensuring Your Q&A Entries Are Ready (Indexing Status)
 
-- Click the "Add Q&A" (green button) at the top right.
-- Enter the question that users may ask.
-- Provide the answer that the chatbot should respond with.
-- Save the Q&A entry.
+Once you add a Q&A pair, the system needs a moment to process it before the chatbot can use it. The status column will show:
 
-B. Bulk Upload via CSV
-
-- Click the "Import CSV" button.
-- Upload a properly formatted CSV file containing multiple Q&A pairs.
-- The system will process and add the entries automatically.
-
-3. Search and Manage Q&A Entries
-
-- Use the search bar to find specific Q&A pairs.
-- Filter entries by status (e.g., Processing, Indexed, Failed).
-- Review the last synced column to check the latest updates.
-
-4. Ensure Q&A Entries Are Indexed
-
-- Once added, the Q&A entries will undergo processing. The status may show:
-
-  Processing – The system is indexing the Q&A.
-
-  Indexed – Successfully added and ready for chatbot use.
-
-  Failed – An issue occurred; check and re-upload if necessary.
-
-![Imageedit 33 4964409659 Jp](/images/imageedit_33_4964409659.jpg)
-
-![Screenshot2025 03 22181356 Pn](/images/Screenshot2025-03-22181356.png)
-
-By effectively managing your knowledge base, you can optimize your chatbot’s performance and ensure users receive accurate, helpful responses.
+| **Status**     | **What it Means**                                                                     |
+| :------------- | :------------------------------------------------------------------------------------ |
+| **Processing** | The system is currently indexing the Q&A entry.                                       |
+| **Indexed**    | The entry was successfully added and is ready for the chatbot to use.                 |
+| **Failed**     | An issue occurred. Please check the entry or the CSV file and re-upload if necessary. |
