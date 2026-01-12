@@ -12,16 +12,32 @@
   },
   "favicon": "/favicon.ico",
   "navigation": {
+    "global": {
+      "tabs": [
+        {
+          "tab": "Untitled Tab",
+          "href": ""
+        }
+      ]
+    },
     "tabs": [
       {
         "tab": "Guides",
+        "global": {
+          "tabs": [
+            {
+              "tab": "Messaging Channels",
+              "href": "https://aichat.com"
+            }
+          ]
+        },
         "groups": [
           {
             "group": "Get Started",
             "pages": [
               "introduction",
               "video-walkthrough"
-           ]
+            ]
           },
           {
             "group": "Create Your First Chatbot",
@@ -45,7 +61,7 @@
               "customizingandinstallingwebwidget",
               "activatinglivechat",
               "customersurvey"
-             ]
+            ]
           },
           {
             "group": "WhatsApp Configuration",
@@ -66,7 +82,7 @@
             "pages": [
               "subscriptionplans",
               "conversationcredits"
-            ]  
+            ]
           },
           {
             "group": "Essentials",
