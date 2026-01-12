@@ -13,12 +13,6 @@
   "favicon": "/favicon.ico",
   "navigation": {
     "global": {
-      "tabs": [
-        {
-          "tab": "Untitled Tab",
-          "href": "https://aichat.com"
-        }
-      ]
     },
     "tabs": [
       {
@@ -99,7 +93,18 @@
             ]
           }
         ]
-      }
+      },
+      {
+        "tab": "Messaging Guides",
+        "groups": [
+          {
+            "group": "WhatsApp",
+            "pages": [
+              "activatingwhatsappbroadcast"
+            ]
+          }
+        ]
+      }      
     ]
   },
   "logo": {
