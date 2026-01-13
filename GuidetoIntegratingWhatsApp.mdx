@@ -81,14 +81,86 @@ You can disconnect your WhatsApp Business API account number from our AiChat pla
 
 ![Imageedit 2 9904210957(1) Jp](/images/imageedit_2_9904210957\(1\).jpg)
 
+# FAQ
+
+<AccordionGroup>
+  <Accordion title="Why can't I complete the embedded signup flow for WhatsApp Business?">
+    Some common issues include:
+
+    - Incorrect or mismatched business documents
+    - Mismatched business name or address
+    - Unverified domain or contact email
+    - Browser-related issues (use incognito mode or clear cache)
+  </Accordion>
+  <Accordion title="Is Facebook Business Verification required for WhatsApp integration?">
+    Verification is required to access the WhatsApp Business API. You must complete Facebook Business Verification after your WhatsApp Business Account (WABA) is created, or if you haven't done so previously.
+  </Accordion>
+  <Accordion title="How do I check if my Facebook Business is verified?">
+     Go to your Facebook Business Manager under _Business Settings \> Security Centre_. Your verification status will be displayed on the Verification section.
+  </Accordion>
+  <Accordion title="What if my business is marked as ineligible for verification?">
+     This may occur if your information doesn’t meet Meta’s requirements or your business category isn’t supported. Ensure the documents are valid and accurately reflect your business. Contact Meta support if needed.
+  </Accordion>
+  <Accordion title="How can I contact Meta for business verification issues?">
+     Visit the [Meta Business Help Center](https://www.facebook.com/business/help) and raise a support request from your business account.
+  </Accordion>
+  <Accordion title="Can I proceed without verifying my business?">
+     No, verification is mandatory to activate WhatsApp Business API features including chatbot support.
+  </Accordion>
+  <Accordion title="What happens if my Meta business verification fails?">
+    You won’t be able to proceed with WhatsApp integration. Make sure to:
+
+    - Use matching legal documents
+    - Upload clear documentation
+    - Provide an official business email (avoid Gmail/Yahoo)
+  </Accordion>
+  <Accordion title="How do I know my WhatsApp number is successfully connected?">
+    Check the **AiChat dashboard** under WhatsApp Settings:
+
+    - Status will show **Connected** and **Verified**
+    - You can edit integration info, profile details, and messages
+  </Accordion>
+  <Accordion title="Can I reuse a phone number that’s linked to a personal WhatsApp account?">
+    No. It must be a phone number that is not connected to any WhatsApp service.  To reuse a phone number, disconnect the number from personal WhatsApp account or WhatsApp Business account, and try to register with the phone number.  You may need to wait for a couple of minutes for WhatsApp to reset the phone number from its registry.
+  </Accordion>
+  <Accordion title="Why aren’t my messages being delivered?">
+    There can be several reasons why your messages are not delivered
+
+    - **Drop in WhatsApp template quality** - recipients of template may have flagged as spam.  Pause your outbound messsaging activity to allow quality to return to normal. You can review details  under Meta's [WhatsApp Manager](https://business.facebook/com/wa/manage).
+    - Your phone number was disconnected - You can review the phone status under Meta's [WhatsApp Manager](https://business.facebook/com/wa/manage).
+    - Lack of conversation credit balance
+  </Accordion>
+  <Accordion title="When I disable WABA integration, my phone number is still connected. How do I delete it?">
+    ### 
+
+    When you disable WABA integration, your phone number remains linked to the account. If you decide to delete your phone number while it's still connected, you'll need to reconnect it afterwards. To remove the number manually, go to the [Business Facebook WhatsApp Manager](https://business.facebook.com/wa/manage). Please note that it may take a few minutes for the changes to update.
+  </Accordion>
+  <Accordion title="My bot can receive WhatsApp messages but recipients are not getting responses. What can I do?">
+    If your chatbot is able to **receive messages but not send replies**, it's possible that your **WhatsApp Business Account (WABA) has been restricted** by Meta.
+
+    To verify the status of your WABA:
+
+    1. Visit your [Meta Business Settings](https://business.facebook.com/settings) and navigate to **WhatsApp Accounts**.
+    2. Check for any alerts, such as account restrictions or policy violations.
+
+    > ⚠️ If your WABA is restricted, you will need to resolve the issue directly with Meta. AiChat is unable to lift these restrictions on your behalf.
+
+    If you have trouble with your WABA, please contact our [support](mailto:support@aichat.com).
+
+    ### 
+  </Accordion>
+  <Accordion title="My bot is responding with multiple messages that seem to be from different sources.">
+    When you are receiving multiple responses that seem to be coming from different sources on you personal WhatApp, this may be an issue where the WhatsApp Business Account (WABA) was connected to multiple workspaces within our platform, or still integrated to another WhatsApp Chatbot solution. You have a couple of ways to resolve this:
+
+    3. If it is confirmed there is a separate workspace on our platform that is connected to the same WABA, you can disable it under Settings \> WhatsApp
+    3. If it is confirmed the WABA is still connected to another WhatsApp Chatbot solution, please consult the solution's support to disconnect it.
+  </Accordion>
+</AccordionGroup>
+
 ## Next
 
 <Card title="Activate WhatsApp Broadcast" iconType="regular" href="activatingwhatsappbroadcast">
   Create Templates
-</Card>
-
-<Card title="New Card" icon="sparkles">
-  
 </Card>
 
 asdasd
