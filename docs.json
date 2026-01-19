@@ -15,14 +15,6 @@
     "tabs": [
       {
         "tab": "Essentials",
-        "global": {
-          "dropdowns": [
-            {
-              "dropdown": "Components",
-              "href": "http://google.com"
-            }
-          ]
-        },
         "groups": [
           {
             "group": "Get Started",
