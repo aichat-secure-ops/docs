@@ -84,19 +84,19 @@ After collecting information from your prospective leads, you can send the data 
 
 <CodeGroup>
 
-```Method and URL
+```Method Method and URL
 Method: POST
 URL: https://api.hsforms.com/submissions/v3/integration/secure/submit/{your-hubspot-account-id}/{hubspot-form-id}
 ```
 
 
-```Header
+```Header Header
 Authorization: Bearer {{hubspot_token}}
 // Our system will retrieve the latest HubSpot token for you. 
 ```
 
 
-```Body
+```Body Body
 {
     "fields": [
         {
@@ -157,19 +157,19 @@ You can retrieve contact's info to personalise the bot engagement or help agents
 
 <CodeGroup>
 
-```Method and URL
+```Method Method and URL
 Method: GET
 URL: https://api.hubapi.com/crm/v3/objects/contacts/{{user.email}}?idProperty=email&properties=email,phone,firstname
 ```
 
 
-```Header
+```Header Header
 Authorization: Bearer {{hubspot_token}}
 // Our system will retrieve the latest HubSpot token for you. 
 ```
 
 
-```Body
+```Body Body
 // empty - leave it blank
 ```
 
@@ -204,19 +204,19 @@ You can retrieve contact's info to personalise the bot engagement or help agents
 
 <CodeGroup>
 
-```Method and URL
+```Method Method and URL
 Method: PATCH
 URL: https://api.hubapi.com/crm/v3/objects/contacts/{{user.email}}?idProperty=email
 ```
 
 
-```Header
+```Header Header
 Authorization: Bearer {{hubspot_token}}
 // Our system will retrieve the latest HubSpot token for you. 
 ```
 
 
-```Body
+```Body Body
 {
     "properties": {
         "nationality" : "{{user.nationality}}",
