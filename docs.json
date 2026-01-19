@@ -26,47 +26,59 @@
             ]
           },
           {
-            "group": "Knowledge Base and Automation",
+            "group": "Building Your Chatbot",
             "pages": [
-              "knowledgebase",
-              "productcatalog",
-              "Flows"
+              {
+                "group": "Components of Your Bot",
+                "pages": [
+                  "knowledgebase",
+                  "productcatalog",
+                  "Flows",
+                  "chatbotconfiguration"
+                ]
+              },
+              "customizingandinstallingwebwidget",
+              "testing-chatbot"
             ]
           },
           {
-            "group": "Personalizing Your Chatbot",
+            "group": "Engage & Customer Support",
             "pages": [
-              "chatbotconfiguration",
-              "customizingandinstallingwebwidget",
+              "Conversation",
               "activatinglivechat",
               "customersurvey"
             ]
           },
           {
-            "group": "WhatsApp Configuration",
+            "group": "Social Messaging Channels",
             "pages": [
-              "GuidetoIntegratingWhatsApp",
-              "whatsappFAQs"
+              {
+                "group": "Facebook",
+                "pages": [
+                  "messaging-channels/connecting-facebook",
+                  "messaging-channels/setup-facebook-comment-automation"
+                ]
+              },
+              {
+                "group": "WhatsApp",
+                "pages": [
+                  "GuidetoIntegratingWhatsApp",
+                  "activatingwhatsappbroadcast",
+                  "whatsappFAQs"
+                ]
+              }
             ]
           },
           {
-            "group": "Testing Your Chatbot",
+            "group": "3rd Party App Integrations",
             "pages": [
-              "testing-chatbot"
+              "external-app-integrations/hubspot-integration"
             ]
           },
           {
-            "group": "Billing & Subscription",
+            "group": "Analytics",
             "pages": [
-              "subscriptionplans",
-              "conversationcredits"
-            ]
-          },
-          {
-            "group": "Essentials",
-            "pages": [
-              "dashboardoverview",
-              "Conversation"
+              "dashboardoverview"
             ]
           },
           {
@@ -75,33 +87,12 @@
               "inviteteam",
               "removeteam"
             ]
-          }
-        ]
-      },
-      {
-        "tab": "Social Messaging Specific",
-        "groups": [
-          {
-            "group": "WhatsApp",
-            "pages": [
-              "activatingwhatsappbroadcast"
-            ]
           },
           {
-            "group": "Facebook",
+            "group": "Billing & Subscription",
             "pages": [
-              "messaging-channels/setup-facebook-comment-automation"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "App Integrations",
-        "groups": [
-          {
-            "group": "HubSpot",
-            "pages": [
-              "external-app-integrations/hubspot-integration"
+              "subscriptionplans",
+              "conversationcredits"
             ]
           }
         ]
