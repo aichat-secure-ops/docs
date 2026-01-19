@@ -14,18 +14,13 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Essentials",
         "groups": [
           {
             "group": "Get Started",
             "pages": [
               "introduction",
-              "video-walkthrough"
-           ]
-          },
-          {
-            "group": "Create Your First Chatbot",
-            "pages": [
+              "video-walkthrough",
               "SigningUpforanAiChatAccount",
               "Onboarding"
             ]
@@ -45,7 +40,7 @@
               "customizingandinstallingwebwidget",
               "activatinglivechat",
               "customersurvey"
-             ]
+            ]
           },
           {
             "group": "WhatsApp Configuration",
@@ -66,7 +61,7 @@
             "pages": [
               "subscriptionplans",
               "conversationcredits"
-            ]  
+            ]
           },
           {
             "group": "Essentials",
@@ -80,6 +75,34 @@
             "pages": [
               "inviteteam",
               "removeteam"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Social Messaging Specific",
+        "groups": [
+          {
+            "group": "WhatsApp",
+            "pages": [
+              "activatingwhatsappbroadcast"
+            ]
+          },
+          {
+            "group": "Facebook",
+            "pages": [
+              "setup-facebook-comment-automation"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "App Integrations",
+        "groups": [
+          {
+            "group": "HubSpot",
+            "pages": [
+              "hubspot-integration"
             ]
           }
         ]

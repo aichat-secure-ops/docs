@@ -1,184 +1,100 @@
 ---
-title: "Customize Conversation Flows"
-description: "AiChat's Flow Builder is a powerful tool that allows you to create advanced conversation flows. With Flow Builder, you can create more engaging and dynamic conversations that respond to user input in a variety of ways. This guide will offer you further details about flow and how to configure it."
+title: "Customizing Conversation Flows"
+description: "AiChat’s Flow Builder is a powerful tool for creating advanced, dynamic conversations. This guide details how to configure flows beyond the basics to create engaging and dynamic user experiences."
 ---
 
-### When to Create Flow
+## When to Create a Custom Flow
 
-Here are some scenarios where you might create flows:
+Custom flows are ideal for automating specific business processes:
 
-- **Lead Generation Submission**
+1. **Lead Generation Submission:** Use a **Collect Node** to gather user information (e.g., name, email) and an **Action Node** (HTTP API or Email) to send the data to a CRM or lead management system like HubSpot.
+2. **Leave a Message or Contact Us:** Collect customer details using a **Collect Node** when a Live Agent is unavailable, ensuring your customer service team can follow up later.
 
-Use a **Collect Node** to gather user information. Then, use a **Send HTTP API** or **Email Node** to send the data to a lead management system like HubSpot.
+## Steps to Create and Design a Flow
 
-- **Leave a Message or Contact Us**
+The key components of a conversation flow follow a standard pattern: **Trigger** → **Action (Collect/Branch/Message)** → **Send Information (Action Node)**.
 
-Collect customer details using **Collect Node** so you or the customer service team can follow up. This is especially useful when a Live Agent is unavailable.
+### Create the Flow
 
-Now, let's use the second scenario as an example to create a flow.
+1. Log in to the AiChat platform.
+2. Navigate to the **Flows** tab in the side navigation menu.
+3. Click the **“Create Flow”** button.
+4. Input a clear **Flow Name** and **Description** for easy identification.
 
-### Create Flow
+Click **“Create”** to open the flow canvas.
 
-Log in to the AiChat platform and select your organization, once you are in the Aichat dashboard, click the “Flows” tab on the side navigation menu.
+![Flows](/images/Flows.gif)
 
-![images/Flowpage.png](/images/Flowpage.png)
+The Trigger defines when the chatbot will initiate the flow.
 
-Once you are in the “Flows” page, click on the "Create Flow" button. A pop up will appear where you are asked to input the flow name and description for your new flow. Give your flow a name and description to easily identify it later and avoid any confusion with the other flows
+1. Click **“Add Trigger”**.
+2. Input a maximum of five user **Trigger Phrases** (variations of the same user intent, e.g., "I want to leave a message," "Contact us," "Send a note").
+3. Close the edit panel to save the configuration.
 
-![images/CreateFlow.png](/images/CreateFlow.png)
+![Trigger](/images/Trigger.gif)
 
-After you input the name and description, click on the "Create" button to start designing your flow.
+## Add Nodes (Building Blocks)
 
-### ![images/Flowdetails.png](/images/Flowdetails.png)
+**Nodes determine how the conversation progresses.**
 
-Start designing your Conversation Flows
+### **Message Node**
 
-Once you have created a new flow, you will open the flow canvas.
+- **Purpose:** Defines the bot's communication with the user.
+- **Key Configuration Details:**
+  - **Type:** Supports text, quick reply buttons, and media.
+  - **Text:** Use for confirmations or thank-you messages (e.g., "Thank you for your inquiry.").
+  - **Dynamic Response:** Use smart rephrasing for unique responses.
 
-The key components of a flow usually starts with:
+![Message Node](/images/MessageNode.gif)
 
-Trigger → Do some action like collect information → Send collected information somewhere
+### **Collect Node**
 
-Here you will need to input a Trigger phrase to initiate the flow by clicking “Add Trigger” to initiate the trigger setup.
+- **Purpose:** Captures specific user details, functioning like an online form.
+- **Key Configuration Details:**
+  - **Field Name & Type:** Define the variable and data type (e.g., _email_, _date_).
+  - **Mapping:** Option to map the answer to the user profile.
+  - **Validation:** Set if the field is mandatory.
+  - **Prompt:** Customize the bot's message (e.g., "Please enter your check-in date").
+  - To add more fields, select **"Add Field."** 
 
-![images/addtrigger.png](/images/addtrigger.png)
+To confirm the user's input, select the **"Replay the options to the visitor"** checkbox
 
-<Info>
-  Trigger nodes: they define when chatbot will initiate the flow. You can define user phrases and variations that expresses the same user intent that will trigger this flow.
-</Info>
+![Collect Node](/images/CollectNode.gif)
 
-The system will display the Trigger panel. You will need to input the phrases of maximum five phrases for the trigger. It automatically adds a new text box when you write your trigger.
+### **Action Node - Email**
 
-![images/addmoretrigger.png](/images/addmoretrigger.png)
+Purpose: sends email to target recipients.  Email originates from AiChat's no reply email address. Input recipient emails, subject, and body. Must define separate paths for **Success** and **Failure** of the email delivery.
 
-Close the edit panel, and the system will automatically save the configuration.
+- You can personalise email Subject and the Body content by using placeholders {x}.  Attributes from conversation profile will be used to personalise the email's content.
 
-After you have finished setting up the Trigger phrase. You can start to add nodes.
+![Email Node](/images/EmailNode.gif)
 
-### Add a Node
+### Action Node - HTTP API
 
-Nodes are the building blocks of a flow and they determine how the conversation will progress. There are four main types of Nodes you can choose.
+**Purpose: **Used for API calls (e.g., sending data to a CRM). Provide the API endpoint, method (e.g., POST), and body (e.g., JSON). Must define separate paths for **Success** and **Failure** of the API call.
 
-**The Collect Node**
+- The most important part is in the API request where you must provide the API endpoint that should be called by the AI Agent to retrieve data to send updates.
 
-The Collect Node functions like an online form, capturing specific details from users before performing an action. It gathers data such as the number of rooms, check-in and check-out dates, room type, and more.
 
-Star by clicking the “\+” button to trigger the Node option, then choose Collect Node.
+- You can use any RESTFul API standards; GET, POST, PATCH, PUT and DELETE.
+- You can also include Basic or Bearer token under Authorization Headers if required, and add other header options.
 
-The system will display the Collect Node edit panel where you will need to input the required details, starting with naming the field. Then optionally you can add a description to provide context for your variable.
+Once you submit the API endpoint, you can test to call the API. If it’s working you can save by closing the edit panel. You need to make sure to add unique responses for both successful and unsuccessful API calls, similar to the email action setup.
 
-<Tip>
-  Describe the purpose of the field, like "starting date of hotel check-in", "number of nights to stay". Our AI Agents would be able to better understand the context of the field to interpret different ways a user may say the same thing.
-</Tip>
+![Http Action Node](/images/HttpActionNode.gif)
 
-![/images/collectnodedetail.png\+\_existingInIndexedDbMintlify](/images/collectnodedetail.png)
+### **Branch Node**
 
-Select the data/input type that defines your variable type, you can choose what variable you need to collect from user.
+- **Purpose:** Branches the flow based on specified conditions (user profile data, collected data, etc.).
+- **Key Configuration Details:**
+  - **Conditions:** Define criteria using pre-defined or custom logic (e.g., user_phone_number is not empty).
+  - **Multiple Branches:** Define different paths and responses for each condition met.
 
-![/images/collectnodetype.png\+\_existingInIndexedDbMintlify](/images/collectnodetype.png)
+![Branch Node](/images/BranchNode.gif)
 
-You can also map out or save user answers to the user profile data by utilizing the “Map to user profile” other than that you can also validate whether the field is mandatory or not by switch on the “Add custom validation”
+## Save & Publish
 
-![/images/collectnodeattribute.png\+\_existingInIndexedDbMintlify](/images/collectnodeattribute.png)
+Once satisfied with the flow structure and node configurations, click the **“Save & Publish”** button. This action makes your flow live and available to users.
 
-Finally, click the "Add Message" button to customize the bot's prompts for collecting information.
-
-<Tip>
-  Here are a few examples:
-
-  ●      Instructions (e.g., “Please enter your check-in date”).
-
-  ●      Disclaimers (e.g., “Do not share sensitive personal information”).
-
-  ●      Option to include other message types like buttons or carousels.
-</Tip>
-
-![/images/collectnodeaddmessage.png\+\_existingInIndexedDbMintlify](/images/collectnodeaddmessage.png)
-
-To add additional questions or fields, select “Add Field.” To display the user’s previously submitted information for verification, select the “Replay the options to the visitor” checkbox.
-
-![/images/collectnodeaddfield.png\+\_existingInIndexedDbMintlify](/images/collectnodeaddfield.png)
-
-**Branch Node**\
-A “Branch Node” branches the conversation flow based on specified conditions. Conditions depend on the user attribute (profile data) such as name, email and phone number.
-
-![/images/branchnodecondition.png\+\_existingInIndexedDbMintlify](/images/branchnodecondition.png)
-
-You can have multiple branches defined by the condition. Once a condition is met, the flow moves directly to the connected path.
-
-To activate the branch node, open the nodes option and click branch node. Then, input the conditions that users need to meet. If your conditions are complicated to define using simple pre-defined conditions, you can write out the qualifying criteria using **Custom.**
-
-<Tip>
-  Use the Branch Node to provide unique responses based on specific conditions. For example, if you want to tailor replies depending on whether a user has already submitted their phone number, this node helps you customize the answers accordingly.
-</Tip>
-
-![/images/branchnodesetup.png\+\_existingInIndexedDbMintlify](/images/branchnodesetup.png)
-
-You can set more than one condition and each condition can have diverse answers based on your individual preferences.
-
-![/images/branchnoderesponse.png\+\_existingInIndexedDbMintlify](/images/branchnoderesponse.png)
-
-**Message Node**
-
-The Message Node defines how the agent communicates with the user. It supports three message types which are text, quick reply button, and media.
-
-Open the Nodes option and click the “Message Node” to trigger the edit panel. You will find the text type as default.
-
-<Tip>
-  Use **Message node** for a confirmation message or thank-you message after submission of users information or feedback. For example, "_Thank you for your interest in Aichat. Our consultants will get back to you on your inquiry_"**.**
-</Tip>
-
-![/images/messagenodetext.png\+\_existingInIndexedDbMintlify](/images/messagenodetext.png)
-
-Input your text, then you can choose smart rephrasing to give more dynamic & unique responses to the user by clicking the checkbox.
-
-You can add more message elements such as quick reply and media by clicking the “Add Message Element” button. To save your setting, close the panel.
-
-![/images/messagenodeelements.png\+\_existingInIndexedDbMintlify](/images/messagenodeelements.png)
-
-**Action Node**
-
-The Action Node is responsible for executing backend logic, performing API calls, and/or generating responses dynamically based on the state of the conversation.
-
-You can utilize action nodes in two use cases, which are “Email Action Node” and “HTTP Action Node”.
-
-1. **Email Action Node**
-
-   If you need to send an email to users, or one of your team members, then email action is the one to choose. To start by clicking on “Email Action Node” in the Nodes option, then the edit panel will appear. You will need to input details of the email you want to send.
-
-   You will be asked details such as recipient emails, subjects and body emails. Once you finish, close the edit panel to save your setup.
-
-   ![/images/emailactionbody.png\+\_existingInIndexedDbMintlify](/images/emailactionbody.png)
-
-   Once you have saved your email action and returned to the flow canvas, add two separate answers for the success or failure of the email delivery. To do this, click the "\+" button on each of the conditions.
-
-   ![/images/emailactionresponse.png\+\_existingInIndexedDbMintlify](/images/emailactionresponse.png)
-2. **HTTP Action Node**
-
-   The "HTTP Action Node" is an action node that can be used to make an API call. To use it, go to the Nodes option and select "HTTP Action Node."
-
-   You will need to provide details of the action such as name and purpose to prevent confusion with other Nodes.
-
-   ![/images/httpactiondetail.png\+\_existingInIndexedDbMintlify](/images/httpactiondetail.png)
-
-   The most important part is in the API request where you must provide the API endpoint that should be called by the AI Agent to retrieve data to send updates.
-   - You can configure a POST method with JSON as body.
-   - You can also include Basic or Bearer token under Authorization Headers if required, and add other header options.
-
-   ![/images/httpactionapirequest.png\+\_existingInIndexedDbMintlify](/images/httpactionapirequest.png)
-
-   Once you submit the API endpoint, you can test to call the API. If it's working you can save by closing the edit panel.
-
-   ![/images/httpactiontestapi.png\+\_existingInIndexedDbMintlify](/images/httpactiontestapi.png)
-
-   You need to make sure to add unique responses for both successful and unsuccessful API calls, similar to the email action setup.
-
-   ![/images/apiactionresponse.png\+\_existingInIndexedDbMintlify](/images/apiactionresponse.png)
-
-### Save & Publish
-
-Once you are satisfied with your flow, you can deploy it by clicking on the "Save & Publish" button. This will make your flow live and available to users.
-
-![images/saveflow.png](/images/saveflow.png)
-
-In conclusion, Flow Builder enhances user engagement and streamlines business processes through versatile conversation flows.  Users can gather information, execute backend logic, define agent communication, and create conditional paths. Start with simple flows and gradually build complexity to create tailored conversational experiences.
+\
+**In Conclusion:** Flow Builder enhances user engagement and streamlines business processes. Begin with simple flows, like lead collection, and gradually build complexity using conditional branches and powerful action nodes to create tailored conversational experiences.

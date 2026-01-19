@@ -3,85 +3,46 @@ title: "Guide to Integrating WhatsApp in AiChat"
 description: "Integrating WhatsApp with AiChat allows you to connect your chatbot to one of the world’s most popular messaging platforms, enabling real-time engagement with your customers. Follow this guide to set up your WhatsApp Business integration."
 ---
 
-### **When Should Businesses Connect a WhatsApp Number for a Chatbot?**
+# **Integrating your WhatsApp number with AiChat allows you to:**
 
-Businesses should consider connecting their WhatsApp number to a chatbot when:
+- Monitor and respond to text messages in our multi-channel inbox.  
+- Increase customer engagement with 24/7 bot response
+- Boost customer conversion using flows to automate leads generation and other activation conversations.
+- Go beyond 5-user limit set in WhatsApp Business App
+- Automate marketing outreach with broadcast and follow-ups
 
-- **WhatsApp is their primary communication channel**
+# Requirements
 
-If most customer inquiries or service requests come through WhatsApp, automating responses can improve efficiency and reduce response time.
+1. Have a Meta Business Portfolio created. Learn how to [create a Meta Business Portfolio](https://www.facebook.com/business/help/1710077379203657).
+2. You, or the person creating the WhatsApp Business API account, must be an administrator or have full control of Meta Business Profile
+3. Have a phone number capable to receive SMS or incoming calls ready at hand.  This number must not be linked to WhatsApp Personal app, or WhatsApp Business App.  Disconnect the number if it is already linked to WhatsApp Personal or Business App.
+4. If you are migrating from an existing WhatsApp vendor or Business Service Provider, ensure you have disable the WhatsApp number 2-factor authorisation on Meta's WhatsApp Manager portal.
 
-- **They receive a high volume of repetitive queries**
+# **How to Connect Your WhatsApp Number to the Chatbot**
 
-A chatbot can handle FAQs like business hours, product availability, order tracking, or pricing — freeing up human agents for more complex issues.
+### **Step 1: Integrate WhatsApp Business in AiChat**
 
-- **They want to offer 24/7 customer support**
+1. In your AiChat dashboard, go to **Settings → Channels → WhatsApp**.
+3. Click **Enable WhatsApp for Your Business** and follow the prompts to link your accounts.
+4. Upon successful registration, you will return back to AiChat portal with the number setup.
 
-A WhatsApp chatbot can provide immediate responses even outside business hours, improving customer satisfaction and reducing missed inquiries.
+![Navigatingto W Aintegration](/images/NavigatingtoWAintegration.gif)
 
-- **They aim to scale customer support without increasing headcount**
-
-Chatbots allow businesses to manage more conversations simultaneously, which is ideal during campaigns or peak seasons.
-
-- **They are running marketing or promotional campaigns via WhatsApp**
-
-Integrating a chatbot ensures quick follow-up, lead qualification, and better conversion tracking.
-
-- **They serve customers in regions where WhatsApp is widely used**
-
-In many countries, WhatsApp is the default messaging app. Providing support on the platform customers already use creates a more seamless experience.
-
- 
-
-## **How to Connect Your WhatsApp Number to the Chatbot**
-
-### **Step 1: Create a Business Portfolio on Meta**
-
-Before connecting your WhatsApp number, you must have a Meta Business Portfolio.
-
-1. Visit the [Meta Business Settings page](https://business.facebook.com/latest/settings/business_info?business_id=658528453763980).
-2. Log in with your Facebook account.
-3. Set up your **Business Info**:
-   - Business Name
-   - Legal name and address
-   - Business email and website (if applicable)
-
-Need help? Check out the [Meta Help Page](https://www.facebook.com/business/help/1710077379203657) for further reference or to troubleshoot issues.
-
-### **Step 2: Integrate WhatsApp Business in AiChat**
-
-1. Navigate to WhatsApp Integration
-
-- In your AiChat dashboard, go to Settings.
-- Under **Channels**, click on **WhatsApp**.
-
-2. Prepare the Required Accounts and Information
-
-Before enabling WhatsApp for your business, make sure you have the prerequisite items ready.
-
-3. Enable WhatsApp Integration
-
-- Once all prerequisites are met, click the green **Enable WhatsApp for Your Business** button.
-- Follow the prompts to authorize and link your accounts.
-
-![Imageedit 8 6689981295(1) Jp](/images/imageedit_8_6689981295\(1\).jpg)
-
-### **Step 3: Verify your Meta Business Portfolio**
+## **Step 2: Verify your Meta Business Portfolio**
 
 Verification is required to access WhatsApp Business API.
 
 Business verification is only needed after your WhatsApp Business Account (WABA) is created, or if you haven't completed it before.
 
-1. In **Meta Business Settings**, go to **Business Info**.
-2. Go to the Security Centre, and click **Start Verification**.
-3. Complete the verification flow by selecting a country and business type, adding business details, and you can input your preferred verification contact method.
-4. Once submitted, Meta typically reviews within 1–5 business days. Check your verification status in Business Settings.
+1. Verification is required to access the WhatsApp Business API.  Confirm if you require unde **Meta Business Settings** → **Business Info → Security Centre → Business Verification**.
+3. If “Setup a WhatsApp Business Account” requires verification, complete the verification flow by selecting a country and business type, adding business details, and you can input your preferred verification contact method.
+4. Once submitted, Meta typically reviews within 1–5 business days.
 
-### **Step 4: Managing Your WhatsApp Integration in AiChat**
+## **Step 3: Managing Your WhatsApp Integration in AiChat**
 
 Once your WhatsApp Business Account is successfully integrated with AiChat, you can manage and customize your WhatsApp chatbot settings directly from the dashboard.
 
-#### 4.1 WhatsApp Account Status and Settings
+### WhatsApp Account Status and Settings
 
 In the AiChat dashboard:
 
@@ -98,40 +59,108 @@ In the AiChat dashboard:
 
 ![Screenshot2025 04 11155943 Pn](/images/Screenshot2025-04-11155943.png)
 
-### 4.2 Default Messaging Settings
+### Default Messaging Settings
 
-You can customize automated messages such as:
+You can customize the following
 
-- **Welcome Message**: The first message customers receive when initiating a chat.
-- **Starter Messages**: Prompts that help guide the conversation from the start.
-
-These settings help set expectations and streamline customer engagement.
+- **Pre-filled message**: The pre-filled when user clicks on a the WhatsApp link from our web widget
 
 ![Screenshot2025 04 11160629 Pn](/images/Screenshot2025-04-11160629.png)
 
-![Screenshot2025 04 11160644 Pn](/images/Screenshot2025-04-11160644.png)
+### Disconnecting WhatsApp Integration
 
-### 4.3 WhatsApp Performance Dashboard
+You can disconnect your WhatsApp Business API account number from our AiChat platform at anytime.
 
-The **WhatsApp Performance** section allows you to monitor key chatbot metrics:
-
-- **Message Volume**: Total messages sent and received.
-- **Response Time**: Average time taken to reply to customer messages.
-- **Customer Engagement**: Insights on how users interact with your chatbot.
-
-Use these metrics to fine-tune your flows and improve chatbot performance.
-
-![Imageedit 4 5490234501(1) Jp](/images/imageedit_4_5490234501\(1\).jpg)
-
-![Screenshot2025 04 11160907 Pn](/images/Screenshot2025-04-11160907.png)
-
-### 4.4 Disconnecting WhatsApp Integration
-
-You’ll also find a **Disable WhatsApp Integration** option. If selected:
-
-- Your WhatsApp Business Account will be disconnected from the chatbot.
-- The chatbot will no longer send or receive messages on WhatsApp.
+- Select **Disable WhatsApp Integration** to disconnect.
+- The chatbot will stop sending/receiving messages.
 - You can reconnect your WhatsApp Business Account at any time to resume sending and receiving messages through the chatbot.
-- **Note:** AiChat only allows one phone number to be connected at a time. If you wish to change the phone number, you must first disconnect the existing one and then reconnect with the new number.
+
+<Info>
+  If you connect a different number, your previous WhatsApp conversation will receive messages from the new number
+</Info>
 
 ![Imageedit 2 9904210957(1) Jp](/images/imageedit_2_9904210957\(1\).jpg)
+
+# FAQ
+
+<AccordionGroup>
+  <Accordion title="Why can't I complete the embedded signup flow for WhatsApp Business?">
+    Some common issues include:
+
+    - Incorrect or mismatched business documents
+    - Mismatched business name or address
+    - Unverified domain or contact email
+    - Browser-related issues (use incognito mode or clear cache)
+  </Accordion>
+  <Accordion title="Is Facebook Business Verification required for WhatsApp integration?">
+    Verification is required to access the WhatsApp Business API. You must complete Facebook Business Verification after your WhatsApp Business Account (WABA) is created, or if you haven't done so previously.
+  </Accordion>
+  <Accordion title="How do I check if my Facebook Business is verified?">
+     Go to your Facebook Business Manager under _Business Settings \> Security Centre_. Your verification status will be displayed on the Verification section.
+  </Accordion>
+  <Accordion title="What if my business is marked as ineligible for verification?">
+     This may occur if your information doesn’t meet Meta’s requirements or your business category isn’t supported. Ensure the documents are valid and accurately reflect your business. Contact Meta support if needed.
+  </Accordion>
+  <Accordion title="How can I contact Meta for business verification issues?">
+     Visit the [Meta Business Help Center](https://www.facebook.com/business/help) and raise a support request from your business account.
+  </Accordion>
+  <Accordion title="Can I proceed without verifying my business?">
+     No, verification is mandatory to activate WhatsApp Business API features including chatbot support.
+  </Accordion>
+  <Accordion title="What happens if my Meta business verification fails?">
+    You won’t be able to proceed with WhatsApp integration. Make sure to:
+
+    - Use matching legal documents
+    - Upload clear documentation
+    - Provide an official business email (avoid Gmail/Yahoo)
+  </Accordion>
+  <Accordion title="How do I know my WhatsApp number is successfully connected?">
+    Check the **AiChat dashboard** under WhatsApp Settings:
+
+    - Status will show **Connected** and **Verified**
+    - You can edit integration info, profile details, and messages
+  </Accordion>
+  <Accordion title="Can I reuse a phone number that’s linked to a personal WhatsApp account?">
+    No. It must be a phone number that is not connected to any WhatsApp service.  To reuse a phone number, disconnect the number from personal WhatsApp account or WhatsApp Business account, and try to register with the phone number.  You may need to wait for a couple of minutes for WhatsApp to reset the phone number from its registry.
+  </Accordion>
+  <Accordion title="Why aren’t my messages being delivered?">
+    There can be several reasons why your messages are not delivered
+
+    - **Drop in WhatsApp template quality** - recipients of template may have flagged as spam.  Pause your outbound messsaging activity to allow quality to return to normal. You can review details  under Meta's [WhatsApp Manager](https://business.facebook/com/wa/manage).
+    - Your phone number was disconnected - You can review the phone status under Meta's [WhatsApp Manager](https://business.facebook/com/wa/manage).
+    - Lack of conversation credit balance
+  </Accordion>
+  <Accordion title="When I disable WABA integration, my phone number is still connected. How do I delete it?">
+    ### 
+
+    When you disable WABA integration, your phone number remains linked to the account. If you decide to delete your phone number while it's still connected, you'll need to reconnect it afterwards. To remove the number manually, go to the [Business Facebook WhatsApp Manager](https://business.facebook.com/wa/manage). Please note that it may take a few minutes for the changes to update.
+  </Accordion>
+  <Accordion title="My bot can receive WhatsApp messages but recipients are not getting responses. What can I do?">
+    If your chatbot is able to **receive messages but not send replies**, it's possible that your **WhatsApp Business Account (WABA) has been restricted** by Meta.
+
+    To verify the status of your WABA:
+
+    1. Visit your [Meta Business Settings](https://business.facebook.com/settings) and navigate to **WhatsApp Accounts**.
+    2. Check for any alerts, such as account restrictions or policy violations.
+
+    > ⚠️ If your WABA is restricted, you will need to resolve the issue directly with Meta. AiChat is unable to lift these restrictions on your behalf.
+
+    If you have trouble with your WABA, please contact our [support](mailto:support@aichat.com).
+
+    ### 
+  </Accordion>
+  <Accordion title="My bot is responding with multiple messages that seem to be from different sources.">
+    When you are receiving multiple responses that seem to be coming from different sources on you personal WhatApp, this may be an issue where the WhatsApp Business Account (WABA) was connected to multiple workspaces within our platform, or still integrated to another WhatsApp Chatbot solution. You have a couple of ways to resolve this:
+
+    3. If it is confirmed there is a separate workspace on our platform that is connected to the same WABA, you can disable it under Settings \> WhatsApp
+    3. If it is confirmed the WABA is still connected to another WhatsApp Chatbot solution, please consult the solution's support to disconnect it.
+  </Accordion>
+</AccordionGroup>
+
+## Next
+
+<Card title="Activate WhatsApp Broadcast" iconType="regular" href="activatingwhatsappbroadcast">
+  Create Templates
+</Card>
+
+asdasd
