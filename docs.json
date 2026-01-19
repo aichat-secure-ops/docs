@@ -46,7 +46,6 @@
             "group": "WhatsApp Configuration",
             "pages": [
               "GuidetoIntegratingWhatsApp",
-              "activatingwhatsappbroadcast",
               "whatsappFAQs"
             ]
           },
@@ -91,7 +90,7 @@
           {
             "group": "Facebook",
             "pages": [
-              "setup-facebook-comment-automation"
+              "messaging-channels/setup-facebook-comment-automation"
             ]
           }
         ]
@@ -102,7 +101,7 @@
           {
             "group": "HubSpot",
             "pages": [
-              "hubspot-integration"
+              "external-app-integrations/hubspot-integration"
             ]
           }
         ]

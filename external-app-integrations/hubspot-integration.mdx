@@ -13,7 +13,7 @@ By connecting your HubSpot account with AiChat, you can:
 
 ![Hubspot Integration Connect](/images/hubspot-integration-connect.gif)
 
-### Requirements: 
+### Requirements:
 
 - Your HubSpot account role is a **Super Admin** to connect
 - You must login to your HubSpot account
@@ -45,7 +45,6 @@ If your HubSpot contacts have provided their WhatsApp numbers, you can have them
   Our platform picks property **Phone Number** by default as the WhatsApp number.  There is no need to map this
 </Info>
 
-
 # Broadcasting with HubSpot List
 
 If you are using specific HubSpot segmenting conditions on your HubSpot lists, you can use them directly to broadcast to these users.   This simplifies managing one source of segmentation logic - by using HubSpot.
@@ -55,11 +54,11 @@ If you are using specific HubSpot segmenting conditions on your HubSpot lists, y
 1. Ensure you have integrated your HubSpot account.
 1. In your AiChat dashboard, go to **WhatsApp Broadcast → Create Broadcast**
 3. Under Recipients, click **HubSpot Contact List tab** and select the desired HubSpot list.
-4. Continue with [setting up the broadcast](/activatingwhatsappbroadcast). 
+4. Continue with [setting up the broadcast](/activatingwhatsappbroadcast).
 
 ![Hubspot Integration Broadcast With List](/images/hubspot-integration-broadcast-with-list.png)
 
-At the time of broadcast, our platform will import and update contacts from the HubSpot list based on the mapping configuration. 
+At the time of broadcast, our platform will import and update contacts from the HubSpot list based on the mapping configuration.
 
 # Advance Flow Actions with HubSpot API
 
@@ -73,7 +72,7 @@ Below are some examples:
 
 ## Submit Marketing Form
 
-After collecting information from your prospective leads, you can send the data over to HubSpot using **Send Http** action node.  
+After collecting information from your prospective leads, you can send the data over to HubSpot using **Send Http** action node.
 
 ![Hubspot Integration Api Submit Marketing Form](/images/hubspot-integration-api-submit-marketing-form.png)
 
@@ -85,19 +84,19 @@ After collecting information from your prospective leads, you can send the data 
 
 <CodeGroup>
 
-``` Method and URL
+```Method and URL
 Method: POST
 URL: https://api.hsforms.com/submissions/v3/integration/secure/submit/{your-hubspot-account-id}/{hubspot-form-id}
 ```
 
 
-``` Header
+```Header
 Authorization: Bearer {{hubspot_token}}
 // Our system will retrieve the latest HubSpot token for you. 
 ```
 
 
-``` Body
+```Body
 {
     "fields": [
         {
@@ -140,13 +139,13 @@ Authorization: Bearer {{hubspot_token}}
 
 </CodeGroup>
 
-- **Method and URL**: You need to include your HubSpot account ID and the marketing form ID. Learn how to [find your HubSpot Account ID](https://knowledge.hubspot.com/account-management/manage-multiple-hubspot-accounts) or [your marketing form ID](https://knowledge.hubspot.com/forms/find-your-form-gui). 
-- **Header**: You will need to add the Authorization and Bearer token using our {{hubspot_token}} attribute.
-- **Body**: Add the necessary Marketing Form fields using the **HubSpot's **[**property internal name**](https://community.hubspot.com/t5/APIs-Integrations/How-to-discover-actual-property-names/m-p/816971) and the values mapped from our attributes.  
+- **Method and URL**: You need to include your HubSpot account ID and the marketing form ID. Learn how to [find your HubSpot Account ID](https://knowledge.hubspot.com/account-management/manage-multiple-hubspot-accounts) or [your marketing form ID](https://knowledge.hubspot.com/forms/find-your-form-gui).
+- **Header**: You will need to add the Authorization and Bearer token using our {hubspot_token} attribute.
+- **Body**: Add the necessary Marketing Form fields using the \*\*HubSpot's \*\*[**property internal name**](https://community.hubspot.com/t5/APIs-Integrations/How-to-discover-actual-property-names/m-p/816971) and the values mapped from our attributes.
 
 ## Get Contact Records
 
-You can retrieve contact's info to personalise the bot engagement or help agents with customer serivce using **Send Http** action node.  
+You can retrieve contact's info to personalise the bot engagement or help agents with customer serivce using **Send Http** action node.
 
 ![Hubspot Integration Api Get Contact Records](/images/hubspot-integration-api-get-contact-records.png)
 
@@ -154,31 +153,30 @@ You can retrieve contact's info to personalise the bot engagement or help agents
   This utilises HubSpot API [Contact Records](https://developers.hubspot.com/docs/api-reference/crm-contacts-v3/guide#retrieve-an-individual-contact). Please refer to HubSpot's API documentation for details on how to use their endpoints.
 </Info>
 
-
 **Send Http Node Configuration Example:**
 
 <CodeGroup>
 
-``` Method and URL
+```Method and URL
 Method: GET
 URL: https://api.hubapi.com/crm/v3/objects/contacts/{{user.email}}?idProperty=email&properties=email,phone,firstname
 ```
 
 
-``` Header
+```Header
 Authorization: Bearer {{hubspot_token}}
 // Our system will retrieve the latest HubSpot token for you. 
 ```
 
 
-``` Body
+```Body
 // empty - leave it blank
 ```
 
 </CodeGroup>
 
 - **Method and URL**: You need to include the user's email attribute `{{user.email}}` and the properties you want back in the response.  If you are using another identifier, modify the payload accordingly.
-- **Header**: You will need to add the Authorization and Bearer token using our {{hubspot_token}} attribute.
+- **Header**: You will need to add the Authorization and Bearer token using our {hubspot_token} attribute.
 - **Body**: Leave it empty as API endpoint does not require.
 - If the contact exists, **success** path will be triggered
 - If the contact does not exists,**failure**  path will be triggered.
@@ -187,7 +185,7 @@ Authorization: Bearer {{hubspot_token}}
 
 If the contact exists, you can save the data into specific attributes.
 
-1. In the same **Send Http configuration → Response Mapping**, click Test request.  
+1. In the same **Send Http configuration → Response Mapping**, click Test request.
 2. If successful, you will see the response on the right panel.  Remember to swap the placeholder `{{user.email}}` to a valid email address when testing.
 3. Click on a one of the desired data you wish to save, and select the attribute you want to soave to. You can save as many of the data you wish.
 4. Once done, remember to revert back to `{{user.email}}` in the Method and URL.
@@ -196,30 +194,29 @@ If the contact exists, you can save the data into specific attributes.
 
 # Update Contact Records
 
-You can retrieve contact's info to personalise the bot engagement or help agents with customer serivce using **Send Http** action node.  
+You can retrieve contact's info to personalise the bot engagement or help agents with customer serivce using **Send Http** action node.
 
 <Info>
   This utilises HubSpot API [Update Contact Records](https://developers.hubspot.com/docs/api-reference/crm-contacts-v3/guide#update-an-individual-contact). Please refer to HubSpot's API documentation for details on how to use their endpoints.
 </Info>
 
-
 **Send Http Node Configuration Example:**
 
 <CodeGroup>
 
-``` Method and URL
+```Method and URL
 Method: PATCH
 URL: https://api.hubapi.com/crm/v3/objects/contacts/{{user.email}}?idProperty=email
 ```
 
 
-``` Header
+```Header
 Authorization: Bearer {{hubspot_token}}
 // Our system will retrieve the latest HubSpot token for you. 
 ```
 
 
-``` Body
+```Body
 {
     "properties": {
         "nationality" : "{{user.nationality}}",
@@ -231,8 +228,8 @@ Authorization: Bearer {{hubspot_token}}
 </CodeGroup>
 
 - **Method and URL**: You need to include the user's email attribute `{{user.email}}`.  If you are using another identifier, modify the payload accordingly.
-- **Header**: You will need to add the Authorization and Bearer token using our {{hubspot_token}} attribute.
-- **Body**: Include the properties you want to update and the values. 
+- **Header**: You will need to add the Authorization and Bearer token using our {hubspot_token} attribute.
+- **Body**: Include the properties you want to update and the values.
 - If the contact exists, **success** path will be triggered
 - If the contact does not exists,**failure**  path will be triggered.
 
