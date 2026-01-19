@@ -1,6 +1,6 @@
 ---
-title: "Customizing Conversation Flows"
 description: "AiChat’s Flow Builder is a powerful tool for creating advanced, dynamic conversations. This guide details how to configure flows beyond the basics to create engaging and dynamic user experiences."
+title: "Getting Customer Feedback"
 ---
 
 ## When to Create a Custom Flow
@@ -65,17 +65,15 @@ To confirm the user's input, select the **"Replay the options to the visitor"** 
 
 Purpose: sends email to target recipients.  Email originates from AiChat's no reply email address. Input recipient emails, subject, and body. Must define separate paths for **Success** and **Failure** of the email delivery.
 
-- You can personalise email Subject and the Body content by using placeholders {x}.  Attributes from conversation profile will be used to personalise the email's content.
+- You can personalise email Subject and the Body content by using placeholders x.  Attributes from conversation profile will be used to personalise the email's content.
 
 ![Email Node](/images/EmailNode.gif)
 
 ### Action Node - HTTP API
 
-**Purpose: **Used for API calls (e.g., sending data to a CRM). Provide the API endpoint, method (e.g., POST), and body (e.g., JSON). Must define separate paths for **Success** and **Failure** of the API call.
+\*\*Purpose: \*\*Used for API calls (e.g., sending data to a CRM). Provide the API endpoint, method (e.g., POST), and body (e.g., JSON). Must define separate paths for **Success** and **Failure** of the API call.
 
 - The most important part is in the API request where you must provide the API endpoint that should be called by the AI Agent to retrieve data to send updates.
-
-
 - You can use any RESTFul API standards; GET, POST, PATCH, PUT and DELETE.
 - You can also include Basic or Bearer token under Authorization Headers if required, and add other header options.
 

@@ -1,5 +1,5 @@
 ---
-title: "HubSpot Integration"
+title: "HubSpot"
 description: "Link your HubSpot account to sync contacts or automate broadcast to new contacts"
 ---
 
@@ -140,7 +140,7 @@ Authorization: Bearer {{hubspot_token}}
 </CodeGroup>
 
 - **Method and URL**: You need to include your HubSpot account ID and the marketing form ID. Learn how to [find your HubSpot Account ID](https://knowledge.hubspot.com/account-management/manage-multiple-hubspot-accounts) or [your marketing form ID](https://knowledge.hubspot.com/forms/find-your-form-gui).
-- **Header**: You will need to add the Authorization and Bearer token using our {hubspot_token} attribute.
+- **Header**: You will need to add the Authorization and Bearer token using our hubspot_token attribute.
 - **Body**: Add the necessary Marketing Form fields using the \*\*HubSpot's \*\*[**property internal name**](https://community.hubspot.com/t5/APIs-Integrations/How-to-discover-actual-property-names/m-p/816971) and the values mapped from our attributes.
 
 ## Get Contact Records
@@ -176,7 +176,7 @@ Authorization: Bearer {{hubspot_token}}
 </CodeGroup>
 
 - **Method and URL**: You need to include the user's email attribute `{{user.email}}` and the properties you want back in the response.  If you are using another identifier, modify the payload accordingly.
-- **Header**: You will need to add the Authorization and Bearer token using our {hubspot_token} attribute.
+- **Header**: You will need to add the Authorization and Bearer token using our hubspot_token attribute.
 - **Body**: Leave it empty as API endpoint does not require.
 - If the contact exists, **success** path will be triggered
 - If the contact does not exists,**failure**  path will be triggered.
@@ -228,7 +228,7 @@ Authorization: Bearer {{hubspot_token}}
 </CodeGroup>
 
 - **Method and URL**: You need to include the user's email attribute `{{user.email}}`.  If you are using another identifier, modify the payload accordingly.
-- **Header**: You will need to add the Authorization and Bearer token using our {hubspot_token} attribute.
+- **Header**: You will need to add the Authorization and Bearer token using our hubspot_token attribute.
 - **Body**: Include the properties you want to update and the values.
 - If the contact exists, **success** path will be triggered
 - If the contact does not exists,**failure**  path will be triggered.
