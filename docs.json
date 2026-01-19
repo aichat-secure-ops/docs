@@ -89,16 +89,33 @@
         ]
       },
       {
-        "tab": "Messaging Guides",
+        "tab": "Social Messaging Specific",
         "groups": [
           {
             "group": "WhatsApp",
             "pages": [
               "activatingwhatsappbroadcast"
             ]
+          },
+          {
+            "group": "Facebook",
+            "pages": [
+              "setup-facebook-comment-automation"
+            ]
           }
         ]
-      }      
+      },
+      {
+        "tab": "App Integrations",
+        "groups": [
+          {
+            "group": "HubSpot",
+            "pages": [
+              "hubspot-integration"
+            ]
+          }
+        ]
+      }
     ]
   },
   "logo": {
