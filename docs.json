@@ -12,12 +12,16 @@
   },
   "favicon": "/favicon.ico",
   "navigation": {
-    "global": {
-    },
     "tabs": [
       {
         "tab": "Essentials",
         "global": {
+          "dropdowns": [
+            {
+              "dropdown": "Components",
+              "href": "http://google.com"
+            }
+          ]
         },
         "groups": [
           {
