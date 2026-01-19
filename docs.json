@@ -16,7 +16,7 @@
     },
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Essentials",
         "global": {
         },
         "groups": [
@@ -24,12 +24,7 @@
             "group": "Get Started",
             "pages": [
               "introduction",
-              "video-walkthrough"
-            ]
-          },
-          {
-            "group": "Create Your First Chatbot",
-            "pages": [
+              "video-walkthrough",
               "SigningUpforanAiChatAccount",
               "Onboarding"
             ]
