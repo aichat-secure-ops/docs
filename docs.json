@@ -47,7 +47,8 @@
             "pages": [
               "GuidetoIntegratingWhatsApp",
               "activatingwhatsappbroadcast",
-              "whatsappFAQs"
+              "whatsappFAQs",
+              "migrating-whats-app-number"
             ]
           },
           {
@@ -91,7 +92,7 @@
           {
             "group": "Facebook",
             "pages": [
-              "setup-facebook-comment-automation"
+              "untitled-page"
             ]
           }
         ]

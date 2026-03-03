@@ -1,0 +1,65 @@
+---
+title: "Migrating WhatsApp number"
+---
+
+You may have an existing WhatsApp number connected that your customers are speaking to, and you wish to switch them over to automate the conversations using AiChat's AI features. 
+
+Your WhatsApp number maybe installed on one of the 3 Meta products: WhatsApp (Personal), WhatsApp Business & WhatsApp Business API (via Business Service Provider). Identify the correct one and follow our guide.  
+
+# Migrating from WhatsApp (Personal) or WhatsApp Business
+
+If your number is registered on a WhatsApp (Personal) or WhatsApp Business app, you can easily migrate over the number to WhatApp Business API (WABA) on AiChat. Your WhatsApp number might be temporarily unavailable during the migration.
+
+<Warning>
+  Existing conversations in the WhatsApp app will not be migrated to AiChat and cannot be accessed after the number is disconnected from the. We recommended exporting conversations directly from the WhatsApp apps if required.
+</Warning>
+
+## Requirements
+
+1. Have access to the phone number you want to migrate. This number should be able to receive SMS or voice calls from an international number to complete verification by Meta. The phone number must not have any IVR system enabled.
+2. You must have Meta Business Profile created
+3. You or the user doing the migration must have admin or full control role in the Meta Business Profile
+
+## Steps
+
+1. Disconnect the number from the WhatsApp app ([How to disconnect](https://faq.whatsapp.com/2138577903196467/?cms_platform=android)). It may take up to 3 minutes for the disconnected number to become available.
+2. Follow the steps [Guide to integrating WhatsApp](/GuidetoIntegratingWhatsApp) to create the WhatsApp Business API account (WABA) from our client portal.
+3. During this migration period, any incoming customer messages will not be captured until our system has successfully linked the number. We recommend to perform migration during a low-traffic period.
+
+    
+
+# Migrating WhatsApp Business API Account from another BSP
+
+If your number is already registered with another Business Service Provider (BSP), you will need to perform additional steps to migrate. Your WhatsApp number might be temporarily unavailable during the migration. 
+
+<Info>
+  When migrating from another BSP, only display name, messaging limits, Official Business Account status and approved WhatsApp Templates are migrated to AiChat.
+</Info>
+
+<Note>
+  Existing WhatsApp charges still remains with your incumbent BSP and not migrated to AiChat.
+</Note>
+
+## Requirements
+
+1. The original WABA status must be approved, and Business Verification completed and approved
+2. Ensure the Currency is set to USD. AiChat only supports USD currency. You can check from Meta Business Portal, under Business Settings → Assets → WhatsApp Accounts → Selected WhatsApp account. If a different currency is set, you will have to create WABA without migration. See Troubleshoot for more information.
+3. Disable 2FA in the source WABA﻿﻿, if it was enabled.  Learn [how to disable](https://developers.facebook.com/documentation/business-messaging/whatsapp/business-phone-numbers/phone-numbers#disabling-two-step-verification).
+4. The original phone display name must be approved, and cannot be associated with pending display name change requests.
+5. Have access to the phone number you want to migrate. This number should be able to receive SMS or voice calls from an international number to complete verification by Meta. The phone number must not have any IVR system enabled.
+
+## Steps
+
+1. Disabled 2FA in the source WABA.
+2. Follow the steps [Guide to integrating WhatsApp](/GuidetoIntegratingWhatsApp) to create the WhatsApp Business API account (WABA) from our client portal.  Select the source WABA and the same phone number. You may be asked to verify the phone number by receiving a SMS or voice call.
+3. During this migration period, any incoming customer messages will not be captured until our system has successfully linked the number. We recommend to perform migration during a low-utilization period.
+
+# Troubleshooting
+
+<Accordion title="My source WABA's currency is not in USD">
+  AiChat payment with Meta is set to accept USD only.  If your source WABA is not in USD, you will not be able to do a switch and retain existing WhatsApp number status.  You will need to delete the phone number from WhatsApp Mananger.
+
+  1. Go to [WhatsApp Manager Portal](https://business.facebook.com/wa/manage) → select the source WABA → go to Phones Numbers to view the list of connected phone numbers.
+  2. Click on Delete button and confirm the deletion.  It may take up to 5 minutes for the disconnected number to become available.
+  3. Follow the steps [Guide to integrating WhatsApp](/GuidetoIntegratingWhatsApp) to create the WhatsApp Business API account (WABA) from our client portal as if it is a new WABA.
+</Accordion>
