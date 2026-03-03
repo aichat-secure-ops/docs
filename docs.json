@@ -63,6 +63,7 @@
                 "pages": [
                   "GuidetoIntegratingWhatsApp",
                   "activatingwhatsappbroadcast",
+                  "messaging-channels/migrating-whatsapp-number",
                   "whatsappFAQs"
                 ]
               }
