@@ -66,6 +66,12 @@
                   "messaging-channels/migrating-whatsapp-number",
                   "whatsappFAQs"
                 ]
+              },
+              {
+                "group": "Instagram",
+                "pages": [
+                  "connecting-instagram"
+                ]
               }
             ]
           },
