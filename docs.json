@@ -55,7 +55,8 @@
               {
                 "group": "Facebook",
                 "pages": [
-                  "messaging-channels/connecting-facebook"
+                  "messaging-channels/connecting-facebook",
+                  "messaging-channels/comment-automation"
                 ]
               },
               {

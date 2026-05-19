@@ -1,0 +1,123 @@
+---
+title: "Facebook Comment Automation"
+---
+
+Automatically reply to Facebook comments and send follow-up messages through Messenger to engage users directly from your posts and reels.
+
+### **Before you begin:**
+
+Ensure your Facebook Page is integrated with your AiChat chatbot.
+
+If you have not connected your Facebook Page yet, complete the [Facebook Page connection setup](/social-messaging-channels/facebook/connecting-facebook) first.
+
+## How Facebook Comment Automation Works
+
+![Image (10)](/images/image-\(10\).png)
+
+When a user comments on a monitored Facebook post or reel:
+
+1. AiChat detects the comment
+2. The automation checks if the comment matches your trigger rules
+3. AiChat replies publicly to the comment (optional)
+4. AiChat sends a private message to the user's Facebook Messenger inbox (optional)
+
+**Limitations:**
+
+- **First Level Only:** The bot only replies to new comments, not replies made to existing comments.
+- **DM Limit:** To prevent spam, the bot will only send one private Messenger DM per trigger event.
+
+ 
+
+## Configuration Guide
+
+### Step 1: Create & Select Your Post
+
+- **Navigate:** Go to **Flows → Comment Automation** and click **Create comment automation**.
+- **Name it:** Enter an Automation Name and an optional description.
+- **Pick Content:** Select the published or scheduled Posts or Reels you want to monitor. You can use the search bar to find posts by their post caption or ID.
+
+<img
+  src="/images/image-(11).png"
+  alt="Image (11)"
+  title="Image (11)"
+  style={{ width:"56%" }}
+/>
+
+### Step 2: Define the Trigger
+
+Decide exactly what a user needs to type to start the automation.
+
+- **Rule Type:** Choose Any Comment (triggers for everyone) or Keywords (triggers only for specific words).
+- **Keywords:** List variations like "#interested", "price", or "details".
+- **AI Matching:** Enable Contextual Matching so the bot understands intent even if the user has a typo.
+  <img
+    src="/images/image-(12).png"
+    alt="Image (12)"
+    title="Image (12)"
+    style={{ width:"63%" }}
+  />
+- **Media (Optional):** You can require users to include an Image or Video in their comment to trigger a response.
+  <img
+    src="/images/image-(13).png"
+    alt="Image (13)"
+    title="Image (13)"
+    style={{ width:"63%" }}
+  />
+- **Fallback:** Set a Default Reply for comments that don't match your keywords or arrive outside of your schedule.
+  <img
+    src="/images/image-(14).png"
+    alt="Image (14)"
+    title="Image (14)"
+    style={{ width:"63%" }}
+  />
+
+ 
+
+### Step 3: Set Your Responses
+
+Choose how the bot will interact with the user.
+
+- **Public Reply:** Type a message that appears directly under the user's comment (e.g: "We've sent you a DM!").
+- **Private DM:** Select a Custom Message or a pre-made Automated Flow to be sent to the user's Messenger inbox.
+- **Note:** Only one Messenger DM can be sent per trigger.
+  <img
+    src="/images/image-(15).png"
+    alt="Image (15)"
+    title="Image (15)"
+    style={{ width:"68%" }}
+  />
+
+ 
+
+### Step 4: Schedule & Launch
+
+Review your settings and turn the bot on.
+
+- **Timing:** Choose to Start Immediately or Schedule for later with a specific date and time.
+- **Activate:** Click Activate Automation to go live.
+  <img
+    src="/images/image-(16).png"
+    alt="Image (16)"
+    title="Image (16)"
+    style={{ width:"70%" }}
+  />
+
+Once activated:
+
+- Users can trigger the automation by commenting on the selected post
+- Public replies will appear automatically
+- Messenger messages will be delivered based on your response setup
+
+### Test the Automation
+
+After activation:
+
+1. Open the monitored Facebook post
+2. Add a test comment
+3. Verify:
+   - The public reply appears correctly
+   - The Messenger DM is delivered
+   - Keywords trigger correctly
+   - Media requirements work as expected
+
+ 
