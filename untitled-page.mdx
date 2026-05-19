@@ -1,0 +1,104 @@
+---
+title: "User Roles & Permissions (RBAC)"
+---
+
+Control what your team can view and do in AiChat by assigning roles.
+
+Role-Based Access Control (RBAC) allows you to define access for each user based on their responsibilities. This helps protect sensitive data while ensuring your team has the appropriate level of access
+
+## How Roles Work
+
+Permissions in AiChat are designed to be flexible and secure:
+
+- **Mix and Match Roles:** You can assign multiple roles to a single user.
+- **Permissions Stack:** When a user has multiple roles, their permissions are combined. For example, someone with both _Support Agent_ and _Campaign Manager_ roles can reply to customers and manage marketing .
+- **See vs. Do:** Most areas in AiChat are viewable by everyone. However, taking action (like replying or editing) requires a specific role. Without the right role, a "restricted access" message will appear.
+- **Privacy First:** Modules with customer data (like Conversations and Tickets) are hidden by default . To see them, a user must be assigned a _Support_ or _Customer Data_ role .
+- **Project Access:** Users must be assigned to a specific project before they can access any features within it.
+
+## Choosing the right role
+
+Use these templates to quickly configure your team based on standard industry workflows:
+
+### **Customer Support Team**
+
+- **Support Manager:** Acts as the team lead.
+- **Support Agent:** Handles active customer chats.
+- **Support Viewer:** Monitors conversations for quality assurance without intervening.
+
+### **Marketing Team**
+
+- **Campaign Manager:** Manages marketing broadcasts.
+- **Flow Manager:** Handles automation and system events.
+- **Support Viewer:** Monitors customer conversations for context.
+
+### **Admin & Operations Team**
+
+- **Organization Owner:** Retains full system control.
+- **Project Administrator:** Manages project setup and members.
+- **Integration Manager:** Manages third-party tool connections.
+
+## Managing roles
+
+Learn how to assign and manage roles for your team.
+
+**Assign a role**
+
+1. Go to **Settings → Members & Roles**
+2. Select an existing user or add a new user
+3. Assign one or more roles
+4. Click **Save**
+
+**Updating Access**
+
+You can update or remove roles at any time. Removing a role immediately revokes the features granted by that specific role.
+
+## Roles and permissions
+
+This section provides a detailed overview of access levels across key modules.
+
+### **Administration & Infrastructure**
+
+| **Role** | **Description** |
+| :-- | :-- |
+| **Organization Owner** | Full access to all features, including billing, members, and all modules. Direct access to all projects. |
+| **Project Administrator** | Manages project setup, settings, members, and integrations. Must be added to specific projects for access. |
+| **Channel Manager** | Manages messaging channels such as WhatsApp, Facebook, and Web Widget |
+| **Integration Manager** | Manages third-party integrations such as HubSpot and Shopify |
+
+Only **Organization Owner** has automatic access to all projects. All other roles must be added to specific projects.
+
+### **Support & Customer Experience**
+
+| **Role** | **Description** |
+| :-- | :-- |
+| **Support Manager** | Manages support operations, ticket assignment, and workflows |
+| **Support Agent** | Handles customer conversations and assigned tickets |
+| **Support Viewer** | View-only access to conversations, tickets, and customers |
+| **Conversational AI Manager** | Manages chatbot configuration and knowledge base content |
+| **Flow Manager** | Creates and manages automation flows and system events |
+| **Campaign Manager** | Manages broadcasts, drip campaigns, and marketing automation |
+| **Customer Data Manager** | Manages customer profiles and data records |
+
+## Detailed Permission Matrices
+
+**Restricted Module Access**
+
+Modules containing customer data require explicit role assignments.
+
+- **Conversations:** Support roles required.
+- **Tickets:** Support roles required.
+- **Customers:** Support or Customer Data Manager roles required.
+
+**Conversation Action**
+
+| **Action** | **Support Manager** | **Support Agent** | **Support Viewer** |
+| :-- | :-- | :-- | :-- |
+| **View conversations** | Yes | Yes | Yes |
+| **Join conversations** | Yes | Yes | No |
+| **Reply to customers** | Yes | Yes | No |
+| **Assign/reassign tickets** | Yes | Limited | No |
+
+**Pro Tip:** If a user cannot see conversations, they are likely missing an assigned Support role.
+
+## 

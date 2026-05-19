@@ -15,7 +15,7 @@
     "tabs": [
       {
         "tab": "Essentials",
-        "groups": [
+        "pages": [
           {
             "group": "Get Started",
             "pages": [
@@ -102,7 +102,9 @@
               "subscriptionplans",
               "conversationcredits"
             ]
-          }
+          },
+          "untitled-page",
+          "pii-masking"
         ]
       }
     ]
