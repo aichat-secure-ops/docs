@@ -38,7 +38,8 @@
                 ]
               },
               "customizingandinstallingwebwidget",
-              "testing-chatbot"
+              "testing-chatbot",
+              "pii-masking"
             ]
           },
           {
@@ -93,7 +94,8 @@
             "group": "Team Management",
             "pages": [
               "inviteteam",
-              "removeteam"
+              "removeteam",
+              "untitled-page"
             ]
           },
           {
@@ -102,9 +104,7 @@
               "subscriptionplans",
               "conversationcredits"
             ]
-          },
-          "untitled-page",
-          "pii-masking"
+          }
         ]
       }
     ]

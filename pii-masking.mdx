@@ -1,8 +1,8 @@
 ---
-title: "PII Masking"
+title: "Content Redaction"
 ---
 
-PII (Personally Identifiable Information) Masking automatically detects and hides sensitive customer information such as email addresses, phone numbers, and credit card details before messages are stored or processed. This feature is available for Enterprise tier workspaces.
+Content Redaction automatically detects and hides sensitive customer information such as email addresses, phone numbers, and credit card details before messages are stored in conversation history. This feature is available for Enterprise tier workspaces.
 
 **Before you start, ensure that:**
 
@@ -10,7 +10,7 @@ PII (Personally Identifiable Information) Masking automatically detects and hide
 - You have administrator access to configure Content Redaction
 - You understand whether original sensitive data should be viewable or permanently removed
 
-## How PII Masking Works
+## How Content Redaction Works
 
 When a customer sends a message containing sensitive data, AiChat performs the following in real time:
 
@@ -46,16 +46,16 @@ Administrators can choose between two policies for handling original sensitive d
 - Behavior: Original values are discarded immediately and cannot be recovered.
 - Access: No reveal option is available to anyone.
 - Use Case: Best for organizations with strict compliance or data minimization requirements.
-- Warning: Once data is removed under this policy, it cannot be restored, even if settings are changed later.
+- Warning: Once data is permanently removed, it cannot be restored, even if settings are changed later.
 
-## Configure PII Masking
+## Configure Content Redaction
 
-### Enable Masking
+### Enable Content Redaction
 
 1. Navigate to **Settings \> Content Redaction.**
 2. Toggle **Enable Content Redaction**.
 3. Select specific data types to detect (e.g., enable Email but disable Phone).
-4. Select your Data Handling Policy.
+4. Choose a Data Handling Policy.
 5. Click **Save.**
 
 ### Add Custom Masking Patterns
@@ -66,7 +66,7 @@ Administrators can choose between two policies for handling original sensitive d
 
 ## Key Considerations
 
-- PII Masking only applies to customer messages and free-text responses collected through Collect nodes. Bot and agent responses are not redacted.
+- Content Redaction only applies to customer messages and free-text responses collected through Collect nodes. Bot and agent responses are not redacted.
 - Data submitted through Collect with Form is not redacted. Use Collect with Form when you need to collect sensitive information accurately.
 - Customers using AiChat Web Chat will see sensitive information masked after the message is sent.
 - Customers using social messaging platforms such as WhatsApp will continue to see their original unmasked messages on their own devices, as the conversation history is stored outside of AiChat.
