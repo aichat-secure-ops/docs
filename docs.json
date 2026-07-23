@@ -39,7 +39,7 @@
               },
               "customizingandinstallingwebwidget",
               "testing-chatbot",
-              "pii-masking"
+              "content-redaction"
             ]
           },
           {
@@ -47,6 +47,7 @@
             "pages": [
               "Conversation",
               "activatinglivechat",
+              "ticketing",
               "customersurvey"
             ]
           },
