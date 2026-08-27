@@ -96,6 +96,12 @@
             ]
           }
         ]
+      },
+      {
+        "tab": "Advanced Topics",
+        "pages": [
+          "authentication/single-sign-on"
+        ]
       }
     ]
   },
