@@ -15,7 +15,7 @@
     "tabs": [
       {
         "tab": "Essentials",
-        "groups": [
+        "pages": [
           {
             "group": "Get Started",
             "pages": [
@@ -38,7 +38,8 @@
                 ]
               },
               "customizingandinstallingwebwidget",
-              "testing-chatbot"
+              "testing-chatbot",
+              "content-redaction"
             ]
           },
           {
@@ -46,6 +47,7 @@
             "pages": [
               "Conversation",
               "activatinglivechat",
+              "ticketing",
               "customersurvey"
             ]
           },
@@ -55,7 +57,8 @@
               {
                 "group": "Facebook",
                 "pages": [
-                  "messaging-channels/connecting-facebook"
+                  "messaging-channels/connecting-facebook",
+                  "messaging-channels/comment-automation"
                 ]
               },
               {
@@ -65,6 +68,13 @@
                   "activatingwhatsappbroadcast",
                   "messaging-channels/migrating-whatsapp-number",
                   "whatsappFAQs"
+                ]
+              },
+              {
+                "group": "Instagram",
+                "pages": [
+                  "messaging-channels/connecting-instagram",
+                  "messaging-channels/instagram-comment-automation"
                 ]
               }
             ]
@@ -85,7 +95,8 @@
             "group": "Team Management",
             "pages": [
               "inviteteam",
-              "removeteam"
+              "removeteam",
+              "untitled-page"
             ]
           },
           {
