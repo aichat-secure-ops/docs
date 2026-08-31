@@ -73,8 +73,8 @@
               {
                 "group": "Instagram",
                 "pages": [
-                  "connecting-instagram",
-                  "instagram-comment-automation"
+                  "messaging-channels/connecting-instagram",
+                  "messaging-channels/instagram-comment-automation"
                 ]
               }
             ]
