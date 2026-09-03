@@ -328,7 +328,9 @@ The new SAML app must be enabled before users can sign in.
   Google Workspace changes can take up to 24 hours to apply, although they usually take effect sooner.
 </Info>
 
-![Image (35)](/images/image-\(35\).png "Image (35)")
+<Frame>
+  ![Image (35)](/images/image-\(35\).png "Image (35)")
+</Frame>
 
 ## Step 7: Test and save the connection
 
@@ -344,7 +346,7 @@ Ensure each user’s email address in AiChat exactly matches their **primary ema
 
 After activating SSO, an Organization Administrator can configure which login methods are available:
 
-- **Magic Link:** Passwordless authentication through email.
+- **Magic Link:** Authentication link through email.
 - **SSO:** Authentication through your configured identity provider.
 - **Password:** Standard password authentication, when enabled for your organization.
 
@@ -354,4 +356,6 @@ You can also exclude selected users from mandatory SSO. This allows those users 
 
 The SSO name can be changed later, subject to availability. SSO names are assigned on a first-come, first-served basis.
 
-For more information, refer to Google’s official guide for [setting up a custom SAML app](https://knowledge.workspace.google.com/admin/apps/set-up-your-own-custom-saml-app).
+<Note>
+  Note: All users with [aichat.com](http://aichat.com) or [realpha.com](http://realpha.com) email domain are automatically whitelisted from using SSO, this is allowed us for easy access to client's org should they enable SSO
+</Note>
