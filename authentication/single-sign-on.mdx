@@ -157,6 +157,17 @@ Before you begin, open AiChat App and the Microsoft Entra admin center in separa
 
     ![Image (22)](/images/image-\(22\).png "Image (22)")
   </Step>
+  <Step title="**Configure API permissions**">
+    1. In Microsoft Entra ID, go to **App registrations > [your application] > API permissions**.
+    2. Click **Add a permission**, then select **Microsoft Graph > Delegated permissions**.
+    3. Search for and select these permissions:
+       - `email`
+       - `openid`
+       - `profile`
+       - `User.Read`
+    4. Click **Add permissions**.
+    5. To approve the permissions for all users, click **Grant admin consent for [your organization]**, then confirm by clicking **Yes**.
+  </Step>
   <Step>
   </Step>
 </Steps>
