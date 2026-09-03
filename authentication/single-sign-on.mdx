@@ -197,11 +197,11 @@ Before starting, ensure that:
 
 | Copy from | Information | Paste into |
 | :-- | :-- | :-- |
-| Google Workspace | Entity ID | HelpAIChat |
-| Google Workspace | SSO URL | HelpAIChat |
-| Google Workspace | Certificate | HelpAIChat |
-| HelpAIChat | ACS URL | Google Workspace |
-| HelpAIChat | Audience URI | Google Workspace |
+| Google Workspace | Entity ID | AiChat |
+| Google Workspace | SSO URL | AiChat |
+| Google Workspace | Certificate | AiChat |
+| AiChat | ACS URL | Google Workspace |
+| AiChat | Audience URI | Google Workspace |
 
 <Warning>
   **Important:** Copy all URLs, identifiers, and certificate information exactly as displayed. Changing a character, adding spaces, or removing a trailing slash may cause the connection test to fail.
@@ -301,6 +301,7 @@ Click next on Google "Add custom SAML app". Copy the following values from AiCha
 2. Configure the mapping:
    - **Google Directory attribute:** Select **Basic Information > Primary email**.
    - **App attribute:** Enter `email`.
+     ![Image (34)](/images/image-\(34\).png "Image (34)")
 3. Click **Finish** to create the SAML app.
 
 ## Step 6: Enable user access
