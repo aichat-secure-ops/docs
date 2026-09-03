@@ -99,5 +99,12 @@ Before you begin, open AiChat App and the Microsoft Entra admin center in separa
     </Frame>
   </Step>
   <Step title="Register AiChat in Microsoft Entra ID">
+    1. Sign in to the **Microsoft Azure portal**, then open **Microsoft Entra ID**.
+    2. From the left navigation menu, select **App registrations**, then click **\+ New registration**.
+    3. Complete the application details:
+       - **Name:** Enter a recognizable name, such as `HelpAIChat – [Organization name]`.
+       - **Supported account types:** Select **Accounts in this organizational directory only (Single tenant)** because only users from your Microsoft Entra directory will use this connection.
+       - **Redirect URI:** Leave this blank for now. You will configure it in a later step.
+    4. Click **Register**. You will be redirected to the application’s **Overview** page.
   </Step>
 </Steps>
