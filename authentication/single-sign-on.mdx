@@ -261,12 +261,14 @@ On the **Google Identity Provider details** page, copy the following information
 2. Copy **SSO URL** and paste it into **IdP SSO URL**.
 3. Certificate → X509 Certificate
 
-<img
-  src="/images/image-(29).png"
-  alt="Image (29)"
-  title="Image (29)"
-  style={{ width:"39%" }}
-/>
+<Frame>
+  <img
+    src="/images/image-(29).png"
+    alt="Image (29)"
+    title="Image (29)"
+    style={{ width:"58%" }}
+  />
+</Frame>
 
 ### Step 4: Add AiChat service provider details to Google
 
@@ -279,19 +281,23 @@ Click next on Google "Add custom SAML app". Copy the following values from AiCha
 
 <Columns cols={2}>
   <Column>
-    <img
-      src="/images/image-(31)-1.png"
-      alt="Image (31) 1"
-      title="Image (31) 1"
-      style={{ width:"86%" }}
-    />
+    <Frame>
+      <img
+        src="/images/image-(31)-1.png"
+        alt="Image (31) 1"
+        title="Image (31) 1"
+        style={{ width:"86%" }}
+      />
+    </Frame>
   </Column>
   <Column>
-    <img
-      src="/images/image-(33).png"
-      alt="Image (33)"
-      title="Image (33)"
-    />
+    <Frame>
+      <img
+        src="/images/image-(33).png"
+        alt="Image (33)"
+        title="Image (33)"
+      />
+    </Frame>
   </Column>
 </Columns>
 
@@ -300,8 +306,11 @@ Click next on Google "Add custom SAML app". Copy the following values from AiCha
 1. Under **Attribute mapping**, click **Add mapping**.
 2. Configure the mapping:
    - **Google Directory attribute:** Select **Basic Information > Primary email**.
-   - **App attribute:** Enter `email`.
-     ![Image (34)](/images/image-\(34\).png "Image (34)")
+
+**App attribute:** Enter `email`.
+
+![Image (34)](/images/image-\(34\).png "Image (34)")
+
 3. Click **Finish** to create the SAML app.
 
 ## Step 6: Enable user access
