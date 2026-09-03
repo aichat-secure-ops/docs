@@ -181,3 +181,116 @@ Before you begin, open AiChat App and the Microsoft Entra admin center in separa
 </Steps>
 
 ## Connect using Google Workspace SAML
+
+Before you begin, open the **Google Admin console** and **AiChat Platform** in separate browser tabs. You will need to copy configuration details between the two platforms.
+
+## Prerequisites
+
+Before starting, ensure that:
+
+- SSO is enabled for your organization in AiChat.
+- You have **Owner or Organization Administrator** access in AiChat.
+- You are signed in to Google Workspace as a **Super Administrator**.
+- Each user has a valid primary email address in Google Workspace. AiChat uses this email address to identify and match users.
+
+## Step 1: Start in AiChat Platform
+
+1. Sign in to the **AiChat Platform**.
+2. Go to **Settings > Authentication > SSO**.
+3. Click **\+ Add connection**.
+4. Complete the following fields:
+   - **Display Name:** Enter a recognizable name, such as `Google Workspace`. This name appears on the AiChat login screen when more than one SSO connection is available.
+   - **Connection Type:** Select **SAML**.
+   - **Identity Provider:** Select **Google Workspace**.
+5. Click **Create new connection**.
+6. Keep this browser tab open. The next screen contains information you will need when configuring Google Workspace.
+
+_[Insert image: New SSO connection in AiChat]_
+
+## Step 2: Create a custom SAML app in Google Workspace
+
+1. In a separate browser tab, sign in to the [Google Admin console](https://admin.google.com/).
+2. Go to **Apps > Web and mobile apps**.
+3. Click **Add app > Add custom SAML app**.
+4. Enter an app name, such as `AiChat Platform`, to identify the integration.
+5. Optionally, upload an AiChat app icon.
+6. Click **Continue**.
+
+_[Insert image: Add a custom SAML app]_
+
+## Step 3: Add Google identity provider details to AiChat
+
+On the **Google Identity Provider details** page, copy the following information into AiChat:
+
+1. Copy **Entity ID** and paste it into **IdP Entity ID**.
+2. Copy **SSO URL** and paste it into **IdP SSO URL**.
+3. Click **Download Certificate**. Open the downloaded certificate and copy its complete contents into **X.509 Certificate** in AiChat.
+4. Return to the Google Admin console and click **Continue**.
+
+> Copy the complete certificate, including the `BEGIN CERTIFICATE` and `END CERTIFICATE` lines.
+
+_[Insert image: Google Identity Provider details and AiChat IdP fields]_
+
+## Step 4: Add AiChat service provider details to Google
+
+On the **Service Provider Details** page in Google Workspace:
+
+1. Copy **ACS URL** from AiChat and paste it into the Google Workspace **ACS URL** field.
+2. Copy **Audience URI** from AiChat and paste it into the Google Workspace **Entity ID** field.
+3. Under **Name ID**, configure the following:
+   - **Name ID format:** Leave it as `UNSPECIFIED`.
+   - **Name ID:** Select **Basic Information > Primary email**.
+4. Click **Continue**.
+
+_[Insert image: Google Service Provider Details]_
+
+## Step 5: Configure the email attribute
+
+1. Under **Attribute mapping**, click **Add mapping**.
+2. Configure the mapping:
+   - **Google Directory attribute:** Select **Basic Information > Primary email**.
+   - **App attribute:** Enter `email`.
+3. Click **Finish** to create the SAML app.
+
+_[Insert image: Google Workspace attribute mapping]_
+
+## Step 6: Enable user access
+
+The new SAML app must be enabled before users can sign in.
+
+1. Open the newly created **AiChat Platform** SAML app.
+2. Click **User access**.
+3. Choose who can use the app:
+   - Select **On for everyone** to enable access for the entire organization.
+   - Select specific organizational units or access groups to limit access.
+4. Click **Save**.
+
+> Google Workspace changes can take up to 24 hours to apply, although they usually take effect sooner.
+
+_[Insert image: Google Workspace user access settings]_
+
+## Step 7: Test and save the connection
+
+1. Return to the **AiChat Platform**.
+2. Click **Test connection**.
+3. Sign in with an authorized Google Workspace account when prompted.
+4. After the test is successful, save and activate the connection.
+5. Add or invite users to your organization in AiChat.
+
+Ensure each user’s email address in AiChat exactly matches their **primary email address** in Google Workspace. Enabling access to the Google SAML app does not automatically create an AiChat user account.
+
+## Additional authentication settings
+
+After activating SSO, an Organization Administrator can configure which login methods are available:
+
+- **Magic Link:** Passwordless authentication through email.
+- **SSO:** Authentication through your configured identity provider.
+- **Password:** Standard password authentication, when enabled for your organization.
+
+At least one login method must remain enabled.
+
+You can also exclude selected users from mandatory SSO. This allows those users to sign in using another enabled authentication method if your identity provider is temporarily unavailable.
+
+The SSO name can be changed later, subject to availability. SSO names are assigned on a first-come, first-served basis.
+
+For more information, refer to Google’s official guide for [setting up a custom SAML app](https://knowledge.workspace.google.com/admin/apps/set-up-your-own-custom-saml-app).
