@@ -311,26 +311,33 @@ Before you begin, open AiChat App and the Microsoft Entra admin center in separa
 
 ### Step 6: **Configure API permissions**
 
-<Steps>
-  <Step>
-    1. In Microsoft Entra ID, go to **App registrations > [your application] > API permissions**.
-    2. Click **Add a permission**, then select **Microsoft Graph > Delegated permissions**.
-    3. Search for and select these permissions:
-       - `email`
-       - `openid`
-       - `profile`
-       - `User.Read`
-    4. Click **Add permissions**.
-    5. To approve the permissions for all users, click **Grant admin consent for [your organization]**, then confirm by clicking **Yes**.
+1. In Microsoft Entra ID, go to **App registrations > [your application] > API permissions**.
+2. Click **Add a permission**, then select **Microsoft Graph > Delegated permissions**.
+3. Search for and select these permissions:
+   - `email`
+   - `openid`
+   - `profile`
+   - `User.Read`
+4. Click **Add permissions**.
+5. To approve the permissions for all users, click **Grant admin consent for [your organization]**, then confirm by clicking **Yes**.
 
-    ![Image (23)](/images/image-\(23\).png "Image (23)")
+<img
+  src="/images/image-(23).png"
+  alt="Image (23)"
+  title="Image (23)"
+  style={{ width:"89%" }}
+/>
 
-    ![Image (24)](/images/image-\(24\).png "Image (24)")
-  </Step>
-  <Step title="**Add users and test SSO**">
-    1. Add or invite users to your organization in AiChat platform, then test the SSO connection.
-    2. Ensure each user’s email address in AiChat matches the **Email** property in Microsoft Entra ID to identify and match the user during SSO authentication
+<img
+  src="/images/image-(24).png"
+  alt="Image (24)"
+  title="Image (24)"
+  style={{ width:"88%" }}
+/>
 
-    ![Image (25)](/images/image-\(25\).png "Image (25)")
-  </Step>
-</Steps>
+### Step 7: **Add users and test SSO**
+
+1. Add or invite users to your organization in AiChat platform, then test the SSO connection.
+2. Ensure each user’s email address in AiChat matches the **Email** property in Microsoft Entra ID to identify and match the user during SSO authentication
+
+![Image (25)](/images/image-\(25\).png "Image (25)")
