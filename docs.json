@@ -109,8 +109,13 @@
       },
       {
         "tab": "Advanced Topics",
-        "pages": [
-          "untitled-page-3"
+        "groups": [
+          {
+            "group": "Security & Access",
+            "pages": [
+              "untitled-page-3"
+            ]
+          }
         ]
       }
     ]
