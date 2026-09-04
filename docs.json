@@ -113,7 +113,7 @@
           {
             "group": "Security & Access",
             "pages": [
-              "sso"
+              "single-sign-on"
             ]
           }
         ]
