@@ -200,7 +200,166 @@ To access an SSO-enabled organization:
   <Tab title="Tab 2">
     ### Connect using Google Workspace SAML
 
-    sd
+    sd Before you begin, open the **Google Admin console** and **AiChat Platform** in separate browser tabs. You will need to copy configuration details between the two platforms.
+
+    ### Prerequisites
+
+    Before starting, ensure that:
+
+    - SSO is enabled for your organization in AiChat.
+    - You have **Owner or Organization Administrator** access in AiChat.
+    - You are signed in to Google Workspace as a **Super Administrator**.
+    - Each user has a valid primary email address in Google Workspace. AiChat uses this email address to identify and match users.
+
+    ### Information exchanged during setup
+
+    | Copy from | Information | Paste into |
+    | :-- | :-- | :-- |
+    | Google Workspace | Entity ID | AiChat |
+    | Google Workspace | SSO URL | AiChat |
+    | Google Workspace | Certificate | AiChat |
+    | AiChat | ACS URL | Google Workspace |
+    | AiChat | Audience URI | Google Workspace |
+
+    <Warning>
+      **Important:** Copy all URLs, identifiers, and certificate information exactly as displayed. Changing a character, adding spaces, or removing a trailing slash may cause the connection test to fail.
+    </Warning>
+
+    ### Step 1: Start in AiChat Platform
+
+    <Frame>
+      <img
+        src="/images/image-(26).png"
+        alt="Image (26)"
+        title="Image (26)"
+        style={{ width:"81%" }}
+      />
+    </Frame>
+
+    1. Sign in to the **AiChat Platform**.
+    2. Go to **Settings > Authentication > SSO**.
+    3. Click **\+ Add connection**.
+    4. Complete the following fields:
+       - **Display Name:** Enter a recognizable name, such as `Google Workspace`. This name appears on the AiChat login screen when more than one SSO connection is available.
+       - **Identity Provider:** Select **Google Workspace**.
+       - **Connection Type:** Select **SAML**.
+    5. Click **Create new connection**.
+    6. Keep this browser tab open. The next screen contains information you will need when configuring Google Workspace.
+
+    ### Step 2: Create a custom SAML app in Google Workspace
+
+    <Frame>
+      <img
+        src="/images/image-(27).png"
+        alt="Image (27)"
+        title="Image (27)"
+        style={{ width:"75%" }}
+      />
+    </Frame>
+
+    1. In a separate browser tab, sign in to the [Google Admin console](https://admin.google.com/).
+    2. Go to **Apps > Web and mobile apps**.
+       <Frame>
+         <img
+           src="/images/image-(28).png"
+           alt="Image (28)"
+           title="Image (28)"
+           style={{ width:"38%" }}
+         />
+       </Frame>
+    3. Click **Add app > Add custom SAML app**.
+    4. Enter an app name to help you identify it will be integrating with AiChat platform
+    5. Click **Continue**.
+
+    ### Step 3: Copy Google Workspace information to AiChat
+
+    On the **Google Identity Provider details** page, copy the following information into AiChat:
+
+    1. Copy **Entity ID** and paste it into **IdP Entity ID**.
+    2. Copy **SSO URL** and paste it into **IdP SSO URL**.
+    3. Certificate → X509 Certificate
+
+    <Frame>
+      <img
+        src="/images/image-(29).png"
+        alt="Image (29)"
+        title="Image (29)"
+        style={{ width:"58%" }}
+      />
+    </Frame>
+
+    ### Step 4: Add AiChat service provider details to Google
+
+    Click next on Google "Add custom SAML app". Copy the following values from AiChat to Google
+
+    1. **ACS URL → ACS URL**
+    2. **Audience URI → Entity ID**
+    3. Under NAME ID, leave ID Format as **UNSPECIFIED**, and Name ID as **Basic Information > Primary Email**
+    4. Click **Continue**.
+
+    <Columns cols={2}>
+      <Column>
+        <Frame>
+          <img
+            src="/images/image-(31)-1.png"
+            alt="Image (31) 1"
+            title="Image (31) 1"
+            style={{ width:"86%" }}
+          />
+        </Frame>
+      </Column>
+      <Column>
+        <Frame>
+          <img
+            src="/images/image-(33).png"
+            alt="Image (33)"
+            title="Image (33)"
+            style={{ width:"100%" }}
+          />
+        </Frame>
+      </Column>
+    </Columns>
+
+    ### Step 5: Configure the email attribute
+
+    1. Under **Attribute mapping**, click **Add mapping**.
+    2. Configure the mapping:
+       - **Google Directory attribute:** Select **Basic Information > Primary email**.
+
+    **App attribute:** Enter `email`.
+
+    ![Image (34)](/images/image-\(34\).png "Image (34)")
+
+    3. Click **Finish** to create the SAML app.
+
+    ### Step 6: Enable user access
+
+    The new SAML app must be enabled before users can sign in.
+
+    1. Open the newly created **AiChat Platform** SAML app.
+    2. Click **User access**.
+    3. Choose who can use the app:
+       - Select **On for everyone** to enable access for the entire organization.
+       - Select specific organizational units or access groups to limit access.
+    4. Click **Save**.
+
+    <Info>
+      Google Workspace changes can take up to 24 hours to apply, although they usually take effect sooner.
+    </Info>
+
+    <Frame>
+      ![Image (35)](/images/image-\(35\).png "Image (35)")
+    </Frame>
+
+    ## Step 7: Test and save the connection
+
+    1. Return to the **AiChat Platform**.
+    2. Click **Test connection**.
+    3. Sign in with an authorized Google Workspace account when prompted.
+    4. After the test is successful, save and activate the connection.
+    5. Add or invite users to your organization in AiChat.
+
+    Ensure each user’s email address in AiChat exactly matches their **primary email address** in Google Workspace. Enabling access to the Google SAML app does not automatically create an AiChat user account.
   </Tab>
 </Tabs>
 
