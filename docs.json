@@ -102,7 +102,6 @@
         "pages": [
           "authentication/single-sign-on",
           "authentication/single-sign-on-3",
-          "authentication/single-sign-on-2",
           "ticketing/ticketing"
         ]
       }
