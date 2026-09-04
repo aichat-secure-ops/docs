@@ -299,7 +299,7 @@ Before you begin, open AiChat App and the Microsoft Entra admin center in separa
 
 ### Step 5: **Setup email claims in Azure App Registration**
 
-1. Under App Registration > Token Configuration, **\+ Add optional claim**
+1. Under App Registration > Token Configuration, go to **\+ Add optional claim**
 2. Add both ID and Access Token Type with **email** as claim. You should have 2 email claims in the list
 
 <img
@@ -308,3 +308,29 @@ Before you begin, open AiChat App and the Microsoft Entra admin center in separa
   title="Image (22)"
   style={{ width:"94%" }}
 />
+
+### Step 6: **Configure API permissions**
+
+<Steps>
+  <Step>
+    1. In Microsoft Entra ID, go to **App registrations > [your application] > API permissions**.
+    2. Click **Add a permission**, then select **Microsoft Graph > Delegated permissions**.
+    3. Search for and select these permissions:
+       - `email`
+       - `openid`
+       - `profile`
+       - `User.Read`
+    4. Click **Add permissions**.
+    5. To approve the permissions for all users, click **Grant admin consent for [your organization]**, then confirm by clicking **Yes**.
+
+    ![Image (23)](/images/image-\(23\).png "Image (23)")
+
+    ![Image (24)](/images/image-\(24\).png "Image (24)")
+  </Step>
+  <Step title="**Add users and test SSO**">
+    1. Add or invite users to your organization in AiChat platform, then test the SSO connection.
+    2. Ensure each user’s email address in AiChat matches the **Email** property in Microsoft Entra ID to identify and match the user during SSO authentication
+
+    ![Image (25)](/images/image-\(25\).png "Image (25)")
+  </Step>
+</Steps>
