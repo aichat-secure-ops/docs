@@ -106,6 +106,12 @@
             ]
           }
         ]
+      },
+      {
+        "tab": "Advanced Topics",
+        "pages": [
+          "untitled-page-3"
+        ]
       }
     ]
   },
