@@ -101,7 +101,8 @@
         "tab": "Advanced Topics",
         "pages": [
           "authentication/single-sign-on",
-          "ticketing/ticketing"
+          "ticketing/ticketing",
+          "ticketing/ticketing-2"
         ]
       }
     ]
