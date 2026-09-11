@@ -115,6 +115,12 @@
             "pages": [
               "single-sign-on"
             ]
+          },
+          {
+            "group": "Ticketing",
+            "pages": [
+              "untitled-page-2"
+            ]
           }
         ]
       }
